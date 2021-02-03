@@ -1,0 +1,24 @@
+
+.card-video-basic {
+    display: flex; flex-direction: column;
+    .thumb {
+        position: relative; width:100%; height:auto;
+        img {
+            max-width: 100%;
+        }        
+    }
+    .time-tag {
+        position: absolute; width: 84px; height: 28px;
+    }    
+    .text-box{
+        position: relative; width:100%; 
+        height: 150px; 
+        @include padding(1.25rem 2rem 1.25rem 2rem);
+        .title{
+            font-size: 1.5rem;
+        }
+    }    
+}
+
+
+

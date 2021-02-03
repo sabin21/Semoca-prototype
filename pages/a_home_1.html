@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Guide</title>
+    <link rel="stylesheet" href="../scss/core_common.css">
+</head>
+
+<body>
+    <header class="header fixed">
+        <a href="" class="logo">
+            <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1">
+                <g id="logo_basic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g fill="#000000">
+                        <path id="key" d="M54.3682474,0 L55,0.58533357 L55,58.2822372 L54.7157303,59.4477569 L53.8315038,60 L35.2631266,60 L34.5685394,59.7543952 L34,58.9877994 L34,57.5766749 L34.2528524,56.8405959 L34.7895961,56.3192372 L50.3892284,56.3192372 L50.9577678,55.8589121 L50.9577678,50.5526721 L50.5156546,49.7243074 L49.6628454,49.4176691 L35.04207,49.4176691 L34.2528524,49.1110308 L34.2528524,45.767423 L35.04207,45.3379823 L49.2839453,45.4299003 C50.7367112,45.123262 50.8631374,43.8349399 50.8631374,43.8349399 L50.8631374,43.8349399 L50.8631374,1.01477428 L50.9891851,0.462531176 L51.6209377,0 L54.3682474,0 Z M63.2727273,0 C63.6741818,0 64,0.327227524 64,0.73123469 L64,59.2687653 C64,59.6727725 63.6741818,60 63.2727273,60 L60.7272727,60 C60.3254545,60 60,59.6727725 60,59.2687653 L60,0.73123469 C60,0.327227524 60.3254545,0 60.7272727,0 L63.2727273,0 Z"></path>
+                        <path id="circle" d="M16,60.3204315 C9.74772214,60.3204315 4.67920402,55.2519134 4.67920402,48.9996355 C4.67920402,42.7477221 9.74772214,37.679204 16,37.679204 C22.2522779,37.679204 27.320796,42.7477221 27.320796,48.9996355 C27.320796,55.2519134 22.2522779,60.3204315 16,60.3204315 M16,34 C7.7158685,34 1,40.715504 1,48.9996355 C1,57.2841315 7.7158685,64 16,64 C24.2841315,64 31,57.2841315 31,48.9996355 C31,40.715504 24.2841315,34 16,34"></path>
+                        <path id="square" d="M0.430049576,10.0922139 C0.430049576,10.0922139 2.63540338,9.8847326 3.07029334,10.0922139 C3.5051833,10.2996953 3.69172428,10.8489523 3.69172428,10.8489523 L3.69172428,10.8489523 L3.69172428,23.9039333 C3.84698893,25.8604396 6.17670339,26.3642213 6.17670339,26.3642213 L6.17670339,26.3642213 L6.22168827,26.3641169 C6.23658279,26.3640824 6.25512561,26.3640396 6.27724142,26.3639887 L6.70931304,26.3630071 C9.18403254,26.3574426 19.8379264,26.3343363 29.2551428,26.3269954 L30.3786701,26.3261923 C30.5647345,26.3260718 30.7501535,26.3259581 30.9348518,26.3258515 L32.5756457,26.3250913 C32.7553422,26.3250297 32.9340921,26.3249761 33.11182,26.3249306 L35.6916761,26.3248946 C35.8573013,26.3249375 36.0215278,26.3249899 36.1842805,26.3250521 L37.6072247,26.3258827 C41.744467,26.3292088 44.6424821,26.3402402 44.8186126,26.3642213 C45.4709475,26.4530404 45.9680178,27.1053276 45.9992941,28.2908844 C46.0301981,29.4764412 45.0360575,29.9208918 45.0360575,29.9208918 C45.0360575,29.9208918 45.0196317,29.920963 44.9874225,29.9211011 L44.8440879,29.921712 C42.981663,29.9296092 27.9430959,29.9920308 16.2260041,29.9993084 L12.2233296,29.9993869 C6.78432062,29.9956491 2.71013147,29.9742898 2.16960942,29.9208918 C0.367869248,29.7432537 0,28.4390346 0,28.4390346 L0,28.4390346 L0,10.8489523 Z M42.5226016,0 C43.9066341,0.368421053 44,2.52294737 44,2.52294737 L44,2.52294737 L44,20.2631579 L43.2845528,21 L41.495935,21 L41.1382114,20.6315789 L40.4227642,19.8947368 L40.4227642,6.26315789 C40.0867209,3.84051037 38.172292,3.69368324 37.9414744,3.68478463 L32.9105691,3.68421053 L31.9575935,4.05263158 L30.4655285,4.05263158 L28.9756098,3.68421053 L23.9674797,3.68421053 L23.2434472,4.05263158 L22.1788618,3.68421053 L20.3902439,3.68421053 L19.8411382,4.05263158 L17.9609431,4.05263158 L17.1707317,3.68421053 L11.4471545,3.68421053 L10.3739837,4.05263158 L1.43089431,4.05263158 L0.357723577,3.906 L0,3.53721053 L0,0.736842105 L0.357723577,0 Z"></path>
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <nav class="menu-wrap">
+            <ul>
+                <li><a href="">관람 및 이용</a></li>
+                <li><a href="">전시안내</a></li>
+                <li><a href="">프로그램</a></li>
+                <li><a href="">공예탐색</a></li>
+                <li><a href="">연구 및 출판</a></li>
+                <li><a href="">소개</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="wrap">
+
+    <section class="section-hero">
+        <div id="hero-canvas" class="fixed" style="position: fixed;"></div>
+    </section>
+
+    <section class="section-exhibition-special grid-16col exhibition-special">
+        <div class="card-basic" id="ex-special-1">
+            <div class="card__thumbnail ratio-2x3">
+                <a href="">
+                    <figure class="inner">
+                        <img src="../img/dummy/exhibition_thumb_01_a.png" alt="">
+                        <figcaption>Artwork</figcaption>
+                    </figure>
+                    <div class="category-tag">
+                        <h6>기획전시</h6>
+                    </div>  
+                </a>
+            </div>
+            <div class="card__body">
+                <a href="">
+                    <h5 class="title">새로운 과거 - 박물관 유물과 현대 도자공예</h5>
+                    <p class="detail-info">2021.06.24-2021.07.24 <span class="divide"></span> 제2전시실</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="card-basic" id="ex-special-2">
+            <div class="card__thumbnail ratio-1x1">
+                <a href="">
+                    <figure class="inner">
+                        <img src="../img/dummy/exhibition_thumb_02_a.png" alt="">
+                        <figcaption>Artwork</figcaption>
+                    </figure>
+                    <div class="category-tag">
+                        <h6>기획전시</h6>
+                    </div>  
+                </a>
+            </div>
+            <div class="card__body">
+                <a href="">
+                    <h5 class="title">새로운 과거 - 박물관 유물과 현대 도자공예</h5>
+                    <p class="detail-info">2021.06.24-2021.07.24 <span class="divide"></span> 제2전시실</p>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    
+</div>
+
+<script id="fragment_shader4" type="x-shader/x-fragment">
+
+    uniform float time;
+
+    varying vec2 vUv;
+
+    void main( void ) {
+
+        vec2 position = - 1.0 + 2.0 * vUv;
+
+        float red = abs( sin( position.x * position.y + time / 5.0 ) );
+        float green = abs( sin( position.x * position.y + time / 4.0 ) );
+        float blue = abs( sin( position.x * position.y + time / 3.0 ) );
+        gl_FragColor = vec4( red, green, blue, 1.0 );
+
+    }
+
+</script>
+
+<script id="fragment_shader3" type="x-shader/x-fragment">
+
+    precision mediump float;
+    float radial = 3.;
+    float twist = 2.;
+
+    uniform float time;
+    uniform vec2 u_resolution;
+    varying vec2 vUv;
+
+    #define PI 3.141592
+    #define TP 6.28318
+
+    float hash(vec2 p) {
+      p = fract(p*vec2(0.0,0.0));
+      p += dot(p,p+39.37);
+      return fract(p.x*p.y);
+    }
+
+    void main( void ){
+        vec2 R = u_resolution.xy;
+        vec2 uv = gl_FragCoord.xy;
+        vec2 UV = gl_FragCoord.xy/u_resolution.xy;
+
+        //float time = time;
+        float speed = time * 0.1;
+
+        uv = (uv.xy + uv.xy-R)/R.y;
+        uv= vec2(0., speed + log2(length(uv))) + 
+          atan(uv.y, uv.x) * twist / 6.283;
+        uv.x *=radial;
+
+        /** Start the tile design */
+        vec2 tile_uv = fract(uv) -.5;
+        vec2 id = floor(uv);
+        float n = hash(id);
+        float checker = mod(id.y + id.x,2.) * 2. - 1.;
+        vec3 col = vec3(1.);
+
+        if(n>.5)tile_uv.x *= -1.;
+
+        float d = abs(abs(tile_uv.x+tile_uv.y)-.5);
+        vec2 vUv = tile_uv-sign(tile_uv.x+tile_uv.y+.001)*.5;
+        d = length(vUv);
+
+        float width = .15;
+        float pix =.01;
+        float mask = smoothstep(pix, -pix, abs(d-.5)-width);
+        float angle = atan(vUv.x, vUv.y);
+
+        col *= mask;
+        col = mix(vec3(1,0.,0.),vec3(0.,0.,0.8),col);
+
+        gl_FragColor = vec4(col, 1.);
+    }
+
+</script>
+
+
+<script id="vertexShader" type="x-shader/x-vertex">
+
+    varying vec2 vUv;
+
+    void main()
+    {
+        vUv = uv;
+        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+        gl_Position = projectionMatrix * mvPosition;
+    }
+
+</script>
+
+<script type="module">
+
+    import * as THREE from './build/three.module.js';
+
+    import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+    import { RGBELoader } from './jsm/loaders/RGBELoader.js';
+    import { RoughnessMipmapper } from './jsm/utils/RoughnessMipmapper.js';
+
+    import { EffectComposer } from './jsm/postprocessing/EffectComposer.js';
+    import { RenderPass } from './jsm/postprocessing/RenderPass.js';
+    import { ShaderPass } from './jsm/postprocessing/ShaderPass.js';
+
+    import { RGBShiftShader } from './jsm/shaders/RGBShiftShader.js';
+    import { DotScreenShader } from './jsm/shaders/DotScreenShader.js';
+
+    let heroScene, uniforms1, clock;
+    let camera, scene, renderer, composer;
+    const mouse = new THREE.Vector2();
+    const target = new THREE.Vector2();
+    const windowHalf = new THREE.Vector2( window.innerWidth / 2, window.innerHeight / 2 );
+    const cameraRig = new THREE.Object3D();
+
+    init();
+    render();
+
+    function init() {
+
+        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.01, 10000 );
+        camera.position.set( 0, 0, 3);
+        camera.lookAt(0,0,0);
+        cameraRig.position.set(0,0,0);
+
+        scene = new THREE.Scene();
+        var light1= new THREE.PointLight(0xffffff, 7, 100);
+        var light = new THREE.AmbientLight( 0xffffff, 0.6 );
+        light1.position.set(20,30,10);
+        light1.castShadow = true;
+
+        clock = new THREE.Clock();
+        uniforms1 = {
+            "time": {value: 1.0},
+            //u_resolution: { type: "v2", value: new THREE.Vector2() }
+        };
+        const material = new THREE.ShaderMaterial({
+            uniforms: uniforms1,
+            vertexShader : document.getElementById('vertexShader').textContent,
+            fragmentShader: document.getElementById('fragment_shader4').textContent
+        });
+
+        var emblemSimple = new GLTFLoader().setPath( 'models/' );
+        emblemSimple.load( 'emblem_simple.gltf', function ( gltf ) {
+            
+            const root = gltf.scene;
+            root.position.z= -1.4;
+            root.scale.set(0.5,0.5,0.5);
+            root.rotation.x = 1.5;
+            gltf.castShadow = true;
+            scene.add( root );
+            //cameraRig.add(root);
+            scene.traverse( function( object ) {
+                object.frustumCulled = false;
+                //object.material = material;
+            });
+            render();
+        } );
+
+        
+        scene.add(light1);
+        scene.add(light);
+        //scene.add(cameraRig);
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1;
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        renderer.setClearColor( 0xffffff, 1);
+
+        heroScene = document.getElementById("hero-canvas");
+        heroScene.appendChild(renderer.domElement);
+
+        // postprocessing
+
+        composer = new EffectComposer( renderer );
+        composer.addPass( new RenderPass( scene, camera ) );
+
+        const effect1 = new ShaderPass( DotScreenShader );
+        effect1.uniforms[ 'scale' ].value = 5;
+        //composer.addPass( effect1 );
+
+        const effect2 = new ShaderPass( RGBShiftShader );
+        effect2.uniforms[ 'amount' ].value = 0.0025;
+        //composer.addPass( effect2 );
+
+        window.addEventListener( 'resize', onWindowResize, false );
+        document.addEventListener( 'mousemove', onMouseMove, false );
+
+    }
+    function onMouseMove( event ) {
+        mouse.x = ( event.clientX - windowHalf.x );
+        mouse.y = ( event.clientY - windowHalf.x );
+    }
+
+    function onWindowResize() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        windowHalf.set( window.innerWidth / 2, window.innerHeight / 2 );
+        
+        render();
+
+    }
+
+    function render() {
+
+        target.x = ( 1 - mouse.x ) * -0.002;
+        target.y = ( 1 - mouse.y ) * -0.0004;
+        
+        cameraRig.rotation.x += 0.05 * ( target.y - cameraRig.rotation.x );
+        cameraRig.rotation.y += 0.05 * ( target.x - cameraRig.rotation.y );
+        //cameraRig.rotation.y += 0.005;
+
+        const delta = clock.getDelta();
+        uniforms1[ "time" ].value += delta * 2;
+
+        requestAnimationFrame( render);
+        //renderer.render( scene, camera );
+        composer.render();
+
+    }
+
+</script>
+
+    
+
+</body>
+</html>

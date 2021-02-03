@@ -1,0 +1,17 @@
+
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius){
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+}
+
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+}

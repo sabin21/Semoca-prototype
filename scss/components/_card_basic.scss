@@ -1,0 +1,73 @@
+//
+
+.card-basic {
+    position: relative; width:100%;
+    .card__thumbnail {
+        display: block; width:100%; overflow: hidden;
+        background-color: black;
+        .inner {
+            position: absolute; top:0; left: 0; width: 100%; height: 100%;
+            @include backImageCover;
+            img{
+                position: absolute; max-width: 100%;
+                margin: auto; top:0; bottom: 0;
+            }
+        }
+        .category-tag{
+            position: absolute; left: 0; bottom: 0;
+            padding: $spacer $spacer; background-color: white;
+            h6{
+                margin:0; font-size: map-get($font-scale, font-scale-14);
+            }
+        }
+    }
+    .card__body {
+        width: 100%; padding-top: $spacer;
+        .title {
+            font-size: map-get($font-scale, font-scale-24);
+            letter-spacing: -0.05em;
+        }
+        .date{
+            font-size: map-get($font-scale, font-scale-16);
+        }
+        .detail-info{
+            font-size: map-get($font-scale, font-scale-16);
+            display: flex; align-items: center; padding-top: $spacer-s2;
+            .divide {
+                display: inline-block; width:1px; height: $spacer;
+                background-color: black; margin:2px $spacer 0 $spacer;
+                opacity: 0.3;
+            }
+        }
+    }
+}
+@media (min-width: $bp-lg) {
+    .card-basic {
+        .card__thumbnail {
+            .category-tag{
+                padding: $spacer $spacer-l1;
+                h6{ font-size: map-get($font-scale, font-scale-16);}
+            }
+            &.ratio-16x9 {
+                &::before{
+                    padding-top: 56.25%;
+                }
+            }
+        }
+        .card__body{
+            padding-top: $spacer-l1;
+            &.card--col-2{
+                .title {
+                    font-size: map-get($font-scale, font-scale-42);
+                }
+                .detail-info{
+                    font-size: map-get($font-scale, font-scale-18);
+                    .divide {
+                        height: $spacer; 
+                        margin:2px $spacer 0 $spacer;
+                    }
+                }
+            }
+        }
+    }
+}

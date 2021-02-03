@@ -1,0 +1,46 @@
+.doc-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.doc-wrap .left-menu__wrap {
+  position: absolute;
+  overflow-y: auto;
+  width: 260px;
+  height: 100%;
+  min-height: 100vh;
+  background-color: white;
+  z-index: 10;
+  border-right: 1px solid #CFCFCF;
+}
+
+.doc-wrap .left-menu__wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.doc-wrap .left-menu__wrap .menu-level-1 {
+  position: relative;
+}
+
+.doc-wrap .left-menu__wrap .menu-level-1 h6 {
+  padding: 2rem 1.5rem 0rem 1.5rem;
+}
+
+.doc-wrap .left-menu__wrap .menu-level-1 .menu-level-2 li {
+  padding: 0.25rem 2.25rem;
+}
+
+.doc-content__wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding-left: 300px;
+  background-color: #F4F4F4;
+}
+
+.doc-content__wrap main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

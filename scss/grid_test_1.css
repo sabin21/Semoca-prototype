@@ -1,0 +1,25 @@
+.grid14-wrap {
+  position: relative;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[14];
+      grid-template-columns: repeat(14, 1fr);
+  -ms-grid-rows: (10vh)[20];
+      grid-template-rows: repeat(20, 10vh);
+  gap: 1px;
+}
+
+.grid14-wrap.artwork-1 .artwork-item {
+  width: 100%;
+  background-color: gray;
+}
+
+.grid14-wrap.artwork-1 #artwork__item--01 {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 8;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 6;
+}
