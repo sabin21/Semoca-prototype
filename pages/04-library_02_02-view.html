@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Guide</title>
+    <link rel="stylesheet" href="../scss/core_common.css">
+    <link rel="stylesheet" href="../js/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick/slick-theme.css">
+    <link rel="stylesheet" href="../js/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="../js/photoswipe/default-skin/default-skin.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="" class="logo"></a>
+        <nav class="menu-wrap">
+            <ul>
+                <li class="gnb-menu" id="gnb-menu-intro"><a href="">관람 및 이용</a></li>
+                <li class="gnb-menu" id="gnb-menu-exhibition"><a href="">전시안내</a></li>
+                <li class="gnb-menu" id="gnb-menu-program"><a href="">프로그램</a></li>
+                <li class="gnb-menu" id="gnb-menu-library"><a href="" class="active">공예탐색</a></li>
+                <li class="gnb-menu" id="gnb-menu-research"><a href="">연구 및 출판</a></li>
+                <li class="gnb-menu" id="gnb-menu-museum"><a href="">소개</a></li>
+                <li class="gnb-menu" id="gnb-menu-kid"><a href="">어린이박물관</a></li>
+            </ul>
+        </nav>
+        <div class="header-right-wrap">
+            <a href="" class="btn btn-search">
+                <svg width="48px" height="48px" viewBox="0 0 48 48">                    
+                    <g id="icon_header_search" stroke="none" stroke-width="1" transform="translate(9.000000, 9.000000)" fill="#000000" fill-rule="nonzero">
+                        <path d="M11.5,0 C17.8512746,0 23,5.14872538 23,11.5 C23,14.3154991 21.9882138,16.8946829 20.3084052,18.8937877 L28.2071068,26.7928932 L26.7928932,28.2071068 L18.8937877,20.3084052 C16.8946829,21.9882138 14.3154991,23 11.5,23 C5.14872538,23 0,17.8512746 0,11.5 C0,5.14872538 5.14872538,0 11.5,0 Z M11.5,2 C6.25329488,2 2,6.25329488 2,11.5 C2,16.7467051 6.25329488,21 11.5,21 C16.7467051,21 21,16.7467051 21,11.5 C21,6.25329488 16.7467051,2 11.5,2 Z"></path>
+                    </g>                    
+                </svg>
+            </a>
+            <a href="" class="btn btn-mypage">
+                <svg width="48px" height="48px" viewBox="0 0 48 48">
+                    <g id="icon_header_mypage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path d="M24,6 C28.9705627,6 33,10.0294373 33,15 C33,18.1837844 31.3468184,20.9814475 28.8520427,22.5814018 C34.0576669,24.1926615 37.8643166,28.9886985 37.9964496,34.6931438 L38,35 L38,39 C38,40.5976809 36.75108,41.9036609 35.1762728,41.9949073 L35,42 L18.9184631,42 L18.9184631,40 L35,40 C35.5128358,40 35.9355072,39.6139598 35.9932723,39.1166211 L36,39 L36,35 C36,29.0212984 31.2302364,24.1566348 25.2884075,24.0037074 L25,24 L23,24 C17.0212984,24 12.1566348,28.7697636 12.0037074,34.7115925 L12,35 L12,41 L10,41 L10,35 C10,29.1615466 13.8488242,24.2220342 19.1476605,22.580275 C16.6527363,20.9806939 15,18.1833556 15,15 C15,10.0294373 19.0294373,6 24,6 Z M24,8 C20.1340068,8 17,11.1340068 17,15 C17,18.8659932 20.1340068,22 24,22 C27.8659932,22 31,18.8659932 31,15 C31,11.1340068 27.8659932,8 24,8 Z" fill="#000000" fill-rule="nonzero"></path>
+                    </g>
+                </svg>
+            </a>
+            <a href="" class="btn btn-calendar">
+                <svg width="48px" height="48px" viewBox="0 0 48 48">
+                    <g id="icon_header_calendar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path d="M32,7.5 C32.5128358,7.5 32.9355072,7.88604019 32.9932723,8.38337887 L33,8.5 L33,10 L37.8,10 C40.0358164,10 41.8848153,11.669919 41.9948228,13.7990824 L42,14 L42,37 C42,39.2240803 40.1056856,41 37.8,41 L37.8,41 L12.2,41 C9.89431438,41 8,39.2240803 8,37 L8,37 L8,14 C8,11.7759197 9.89431438,10 12.2,10 L12.2,10 L17,10 L17,8.5 C17,7.94771525 17.4477153,7.5 18,7.5 C18.5128358,7.5 18.9355072,7.88604019 18.9932723,8.38337887 L19,8.5 L19,10 L31,10 L31,8.5 C31,7.94771525 31.4477153,7.5 32,7.5 Z M40,18.5 L10,18.5 L10,37 C10,38.0422531 10.8884586,38.9204984 12.0412249,38.9948973 L12.2,39 L37.8,39 C39.0289368,39 40,38.0896282 40,37 L40,37 L40,18.5 Z M17,32 L17,35 L14,35 L14,32 L17,32 Z M22,32 L22,35 L19,35 L19,32 L22,32 Z M27,32 L27,35 L24,35 L24,32 L27,32 Z M32,32 L32,35 L29,35 L29,32 L32,32 Z M17,27 L17,30 L14,30 L14,27 L17,27 Z M22,27 L22,30 L19,30 L19,27 L22,27 Z M27,27 L27,30 L24,30 L24,27 L27,27 Z M32,27 L32,30 L29,30 L29,27 L32,27 Z M37,27 L37,30 L34,30 L34,27 L37,27 Z M22,22 L22,25 L19,25 L19,22 L22,22 Z M27,22 L27,25 L24,25 L24,22 L27,22 Z M32,22 L32,25 L29,25 L29,22 L32,22 Z M37,22 L37,25 L34,25 L34,22 L37,22 Z M17,12 L12.2,12 C10.9710632,12 10,12.9103718 10,14 L10,14 L10,16.5 L40,16.5 L40,14 C40,12.9577469 39.1115414,12.0795016 37.9587751,12.0051027 L37.8,12 L33,12 L33,13.5 C33,14.0522847 32.5522847,14.5 32,14.5 C31.4871642,14.5 31.0644928,14.1139598 31.0067277,13.6166211 L31,13.5 L31,12 L19,12 L19,13.5 C19,14.0522847 18.5522847,14.5 18,14.5 C17.4871642,14.5 17.0644928,14.1139598 17.0067277,13.6166211 L17,13.5 L17,12 Z" fill="#000000" fill-rule="nonzero"></path>
+                    </g>
+                </svg>
+            </a>
+            <a href="" class="btn btn-book">
+                <svg width="48px" height="48px" viewBox="0 0 48 48">
+                    <g id="icon_header_book" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path d="M37.8,10 C40.1056856,10 42,11.7759197 42,14 L42,14 L42,37 C42,39.2240803 40.1056856,41 37.8,41 L37.8,41 L12.2,41 C9.89431438,41 8,39.2240803 8,37 L8,37 L8,14 C8,11.7759197 9.89431438,10 12.2,10 L12.2,10 Z M40,18.5 L10,18.5 L10,37 C10,38.0422531 10.8884586,38.9204984 12.0412249,38.9948973 L12.2,39 L37.8,39 C39.0289368,39 40,38.0896282 40,37 L40,37 L40,18.5 Z M33.4543468,22.3541389 C33.8141362,22.7153161 33.8407737,23.2825995 33.5349942,23.6743028 L33.4516244,23.7683498 L23.4510446,33.7305004 C23.0804513,34.0996695 22.4953287,34.1167725 22.1047515,33.7901102 L22.0113969,33.7012876 L16.4377885,27.6792539 C16.062647,27.2739303 16.0871144,26.6412382 16.492438,26.2660966 C16.8665829,25.9198121 17.4344618,25.9140228 17.8146729,26.2339792 L17.9055952,26.3207461 L22.774,31.581 L32.0401359,22.3514164 C32.4314112,21.9616446 33.064575,21.9628635 33.4543468,22.3541389 Z M37.8,12 L12.2,12 C10.9710632,12 10,12.9103718 10,14 L10,14 L10,16.5 L40,16.5 L40,14 C40,12.9577469 39.1115414,12.0795016 37.9587751,12.0051027 L37.8,12 Z" fill="#000000" fill-rule="nonzero"></path>
+                    </g>
+                </svg>
+            </a>
+            <a href="" class="btn btn-lang"></a>
+        </div>
+        
+    </header>
+    <div class="sub-nav" id="sub-menu-intro">
+        
+            <ul class="inner">
+                <li><a href="">관람안내</a></li>
+                <li><a href="">박물관 지도</a></li>
+                <li><a href="">전시해설</a></li>
+                <li><a href="">특수관람</a></li>
+                <li><a href="">단체 관람예약</a></li>
+            </ul>
+        
+    </div>
+    
+    <a href="#" class="btn-page-top">
+        <svg width="17px" height="23px" viewBox="0 0 17 23">
+            <path id="page-top-path" fill="#FFFFFF" fill-rule="nonzero" d="M8.65079137,1 L16.3015827,7.55782118 L15,9.07633438 L9.65,4.491 L9.65079137,22.3170778 L7.65079137,22.3170778 L7.65,4.491 L2.30158275,9.07633438 L1,7.55782118 L8.65079137,1 Z"></path>    
+        </svg>
+    </a>
+
+<div class="page-wrap">
+    <div class="library__view-wrap">
+        <div class="library__action-bar">
+            <img src="../img/library_back_btn.png" class="btn-back-list">
+            <img src="../img/btn_page_action.png" class="btn-page-action">
+        </div>
+        <div class="library__view-content-wrap">
+            <img src="../img/library_view_text.png" class="left-col">
+            <div class="right-wrap">
+                <img src="../img/library_view_pict.png" class="pict">
+                <div class="pict-action-bar">
+                    <img src="../img/library_btn_copy.png" class="copyright">
+                    <img src="../img/library_btn_pict_action.png" class="pict-action">
+                </div>
+                <img src="../img/library_view_video.png" class="video">
+                <img src="../img/library_view_3d.png" class="viewer-3d">
+            </div>    
+        </div>
+
+        
+        
+    </div>
+
+<div class="related-category__wrapper">
+    <h5 class="related-category__title">관련 자료 </h5>
+
+    <div class="gallery__media-wrap" id="related-item">
+
+        <div class="gallery__item-wrap">
+            <figure class="item__thumbnail">
+                <img src="../img/dummy/item_art_01.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">백자청화해태연적</h5>
+                <span class="detail-info">
+                    <p>백자(白磁)</p><span class="divide"></span><p>작가미상</p><span class="divide"></span><p>조선</p>
+                </span>
+            </div>
+        </div>
+        <div class="gallery__item-wrap">
+            <figure class="item__thumbnail">
+                <img src="../img/dummy/item_art_02.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">백자청화해태연적</h5>
+                <span class="detail-info">
+                    <p>백자(白磁)</p><span class="divide"></span><p>작가미상</p><span class="divide"></span><p>조선</p>
+                </span>
+            </div>
+        </div>
+        <div class="gallery__item-wrap">
+            <figure class="item__thumbnail">
+                <img src="../img/dummy/item_art_03.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">백자청화해태연적</h5>
+                <span class="detail-info">
+                    <p>백자(白磁)</p><span class="divide"></span><p>작가미상</p><span class="divide"></span><p>조선</p>
+                </span>
+            </div>
+        </div>
+        <div class="gallery__item-wrap">
+            <figure class="item__thumbnail">
+                <img src="../img/dummy/item_art_04.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">백자청화해태연적</h5>
+                <span class="detail-info">
+                    <p>백자(白磁)</p><span class="divide"></span><p>작가미상</p><span class="divide"></span><p>조선</p>
+                </span>
+            </div>
+        </div>
+        <div class="gallery__item-wrap">
+            <figure class="item__thumbnail">
+                <img src="../img/dummy/item_art_06.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">백자청화해태연적</h5>
+                <span class="detail-info">
+                    <p>백자(白磁)</p><span class="divide"></span><p>작가미상</p><span class="divide"></span><p>조선</p>
+                </span>
+            </div>
+        </div>
+        <div class="gallery__item-wrap">
+            <figure class="item__thumbnail">
+                <img src="../img/dummy/item_art_07.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">백자청화해태연적</h5>
+                <span class="detail-info">
+                    <p>백자(白磁)</p><span class="divide"></span><p>작가미상</p><span class="divide"></span><p>조선</p>
+                </span>
+            </div>
+        </div>
+        <div class="gallery__item-wrap">
+            <figure class="item__thumbnail">
+                <img src="../img/dummy/item_art_08.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">백자청화해태연적</h5>
+                <span class="detail-info">
+                    <p>백자(白磁)</p><span class="divide"></span><p>작가미상</p><span class="divide"></span><p>조선</p>
+                </span>
+            </div>
+        </div>
+        <div class="gallery__item-wrap">
+            <figure class="item__thumbnail">
+                <img src="../img/dummy/item_art_09.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">백자청화해태연적</h5>
+                <span class="detail-info">
+                    <p>백자(白磁)</p><span class="divide"></span><p>작가미상</p><span class="divide"></span><p>조선</p>
+                </span>
+            </div>
+        </div>
+        <div class="gallery__item-wrap">
+            <figure class="item__thumbnail">
+                <img src="../img/dummy/item_art_01.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">백자청화해태연적</h5>
+                <span class="detail-info">
+                    <p>백자(白磁)</p><span class="divide"></span><p>작가미상</p><span class="divide"></span><p>조선</p>
+                </span>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<div class="related-category__wrapper">
+    <h5 class="related-category__title">관련 도서</h5>
+
+    <div class="gallery__media-wrap" id="related-book">
+        <div class="gallery__item-book">
+            <figure class="item-book__thumbnail">
+                <img src="../img/library_book_1.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">40일간의 미술관 여헁</h5>
+                <span class="detail-info">
+                    <p>이승규</p><span class="divide"></span><p>2017</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="gallery__item-book">
+            <figure class="item-book__thumbnail">
+                <img src="../img/library_book_2.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">40일간의 미술관 여헁</h5>
+                <span class="detail-info">
+                    <p>이승규</p><span class="divide"></span><p>2017</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="gallery__item-book">
+            <figure class="item-book__thumbnail">
+                <img src="../img/library_book_3.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">40일간의 미술관 여헁</h5>
+                <span class="detail-info">
+                    <p>이승규</p><span class="divide"></span><p>2017</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="gallery__item-book">
+            <figure class="item-book__thumbnail">
+                <img src="../img/library_book_1.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">40일간의 미술관 여헁</h5>
+                <span class="detail-info">
+                    <p>이승규</p><span class="divide"></span><p>2017</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="gallery__item-book">
+            <figure class="item-book__thumbnail">
+                <img src="../img/library_book_2.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">40일간의 미술관 여헁</h5>
+                <span class="detail-info">
+                    <p>이승규</p><span class="divide"></span><p>2017</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="gallery__item-book">
+            <figure class="item-book__thumbnail">
+                <img src="../img/library_book_3.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">40일간의 미술관 여헁</h5>
+                <span class="detail-info">
+                    <p>이승규</p><span class="divide"></span><p>2017</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="gallery__item-book">
+            <figure class="item-book__thumbnail">
+                <img src="../img/library_book_1.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">40일간의 미술관 여헁</h5>
+                <span class="detail-info">
+                    <p>이승규</p><span class="divide"></span><p>2017</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="gallery__item-book">
+            <figure class="item-book__thumbnail">
+                <img src="../img/library_book_2.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">40일간의 미술관 여헁</h5>
+                <span class="detail-info">
+                    <p>이승규</p><span class="divide"></span><p>2017</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="gallery__item-book">
+            <figure class="item-book__thumbnail">
+                <img src="../img/library_book_3.png">
+            </figure>
+            <div class="item__body">
+                <h5 class="title">40일간의 미술관 여헁</h5>
+                <span class="detail-info">
+                    <p>이승규</p><span class="divide"></span><p>2017</p>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+    <!-- Footer -->
+    <section class="footer-sitemap">
+        <div class="sitemap-wrap">
+            <ul>
+                <p>관람 및 이용</p>
+                <li><a href="">안내</a></li>
+                <li><a href="">시설</a></li>
+                <li><a href="">전시해설</a></li>
+                <li><a href="">특수관람</a></li>
+                <li><a href="">관람예약</a></li>
+            </ul>
+            <ul>
+                <p>전시</p>
+                <li><a href="">상설전시</a></li>
+                <li><a href="">기획전시</a></li>
+            </ul>
+            <ul>
+                <p>프로그램</p>
+                <li><a href="">교육신청</a></li>
+                <li><a href="">어린이박물관</a></li>
+                <li><a href="">교육자료</a></li>
+                <li><a href="">온라인 교육</a></li>
+                <li><a href="">행사</a></li>
+            </ul>
+            <ul>
+                <p>공예탐색</p>
+                <li><a href="">안내</a></li>
+                <li><a href="">소장자료</a></li>
+                <li><a href="">박물관기록</a></li>
+                <li><a href="">공예지식</a></li>
+                <li><a href="">안내</a></li>
+            </ul>
+            <ul>
+                <p>연구 및 출판</p>
+                <li><a href="">연구</a></li>
+                <li><a href="">출판</a></li>
+                <li><a href="">e-book</a></li>
+            </ul>
+            <ul>
+                <p>소개</p>
+                <li><a href="">박물관 소개</a></li>
+                <li><a href="">역사</a></li>
+                <li><a href="">조직</a></li>
+                <li><a href="">소식</a></li>
+                <li><a href="">기증 및 후원</a></li>
+            </ul>
+            <ul>
+                <p>어린이박물관</p>
+                <li><a href="">박물관 소개</a></li>
+                <li><a href="">역사</a></li>
+                <li><a href="">조직</a></li>
+                <li><a href="">소식</a></li>
+                <li><a href="">기증 및 후원</a></li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="row-1">
+            <img src="../img/footer_1.png" class="footer-1">
+            <img src="../img/footer_2.png" class="footer-2">
+        </div>
+        <div class="row-2">
+            <img src="../img/footer_3.png" class="footer-3">
+            <img src="../img/footer_4.png" class="footer-4">
+        </div>
+    </footer>
+    
+</div>
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>
+
+<script src="../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../js/slick/slick.min.js"></script>
+<script src="../js/photoswipe/photoswipe.min.js"></script>
+<script src="../js/photoswipe/photoswipe-ui-default.min.js"></script>
+<script>
+    
+    // Scroll Top Button
+    var btnPageTop = document.querySelector('.btn-page-top');
+
+    function scrollTop(){
+        if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+            btnPageTop.style.opacity = "1";
+        }else{
+            btnPageTop.style.opacity = "0";
+        };
+    }
+    window.onscroll = function(){ scrollTop()};
+
+    // GNB Submenu
+    var gnbMenus = document.getElementsByClassName('gnb-menu');
+    var gnbSubMenus = document.getElementsByClassName('sub-nav');
+
+    for(var i = 0; i < gnbMenus.length; i++){
+        gnbMenus[i].addEventListener('mouseenter', function(){
+            gnbSubMenus[0].classList.add('active');                
+        });
+        gnbMenus[i].addEventListener('mouseleave', function(){
+            gnbSubMenus[0].classList.remove('active');
+        });
+    }
+       
+</script>
+<script>
+    /*
+    $('#related-item').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        centerMode: false,
+        variableWidth: true
+    });
+    */
+
+// Photo Swiper
+    var openPhotoSwipe = function() {
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+
+    // build items array
+    var items = [
+        {
+            src: '../img/dummy/high_01.jpg',
+            w: 3000,
+            h: 2000
+        },
+        {
+            src: '../img/dummy/high_02.jpg',
+            w: 1424,
+            h: 1956
+        },
+        {
+            src: '../img/dummy/high_03.jpg',
+            w: 3000,
+            h: 2000
+        },
+        {
+            src: '../img/dummy/high_04.jpg',
+            w: 3000,
+            h: 2000
+        },
+        {
+            src: '../img/dummy/high_05.jpg',
+            w: 1807,
+            h: 2000
+        }
+    ];
+    
+    var options = {      
+      	history: false,
+      	focus: false,
+
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+        
+    };
+    
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+};
+// openPhotoSwipe();
+document.querySelector('.pict-action').onclick = openPhotoSwipe;    
+</script>
+
+</body>
+</html>

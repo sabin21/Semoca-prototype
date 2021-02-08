@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_header_search</title>
+    <g id="icon_header_search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(9.000000, 9.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M11.5,0 C17.8512746,0 23,5.14872538 23,11.5 C23,14.3154991 21.9882138,16.8946829 20.3084052,18.8937877 L28.2071068,26.7928932 L26.7928932,28.2071068 L18.8937877,20.3084052 C16.8946829,21.9882138 14.3154991,23 11.5,23 C5.14872538,23 0,17.8512746 0,11.5 C0,5.14872538 5.14872538,0 11.5,0 Z M11.5,2 C6.25329488,2 2,6.25329488 2,11.5 C2,16.7467051 6.25329488,21 11.5,21 C16.7467051,21 21,16.7467051 21,11.5 C21,6.25329488 16.7467051,2 11.5,2 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -40,10 +40,19 @@ $spacer-l2: $spacer * 2;
 $spacer-l3: $spacer * 2.5;
 $spacer-l4: $spacer * 3;
 
+$spacer-layout-1x: $spacer;
+$spacer-layout-2x: $spacer*2;
+$spacer-layout-3x: $spacer*3;
+$spacer-layout-4x: $spacer*4;
+$spacer-layout-5x: $spacer*5;
+$spacer-layout-6x: $spacer*6;
+$spacer-layout-7x: $spacer*7;
+$spacer-layout-8x: $spacer*8;
+
 //-------------------------------------
 // Typography
 
-$font-family-sans-serif:     "Noto Sans KR",system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:     "Noto Sans", "Noto Sans KR",system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-family-base: $font-family-sans-serif;

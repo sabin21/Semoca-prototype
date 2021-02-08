@@ -1,0 +1,18 @@
+
+
+.related-category__wrapper {
+    position: relative; width: 100%; min-height: 400px;
+    background-color: $white; padding: $spacer-layout-5x 0 ;
+    border-top: 1px solid $color-ui-line-100;
+    .related-category__title{
+        position: inherit; font-size: map-get($font-scale, font-scale-28);
+        padding: 0 0 2rem calc(100vw / 16 + 2rem);
+    }
+}
+.gallery__media-wrap {
+    position: relative; min-width: 100%; min-height: 400px; overflow: hidden;
+    display: flex;
+    &#related-book {
+        display: flex; 
+    }
+}

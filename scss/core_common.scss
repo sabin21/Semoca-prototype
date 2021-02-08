@@ -3,10 +3,9 @@
 @import "reboot";
 @import "mixins";
 
-@import "rfs";
 @import "ratio";
 @import "util";
-//@import "bootstrap4_grid";
+@import "bootstrap4_grid";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap');
@@ -24,6 +23,19 @@ $color-text-deactive : #80898F;
 $color-ui-line-1 : #373C41;
 $color-ui-back-dark: #0B0E10;
 $color-ui-line-dark: #252628;
+
+$color-ui-line-100: #E8E8E8;
+$color-ui-line-200: #E0E0E0;
+$color-ui-line-300: #CECECE;
+$color-ui-line-400: #333333;
+
+$color-ui-solid-100: #F7F7F7;
+$color-ui-solid-500: #333333;
+$color-ui-solid-600: #1A1A1A;
+
+$color-text-gray-200 : #909296;
+$color-text-gray-300 : #606265;
+$color-text-base : $black;
 
 
 // Typography
@@ -65,40 +77,38 @@ $duration-m: 0.4s;
 $duration-l: 0.6s;
 $easing-cubic: cubic-bezier(0.65, 0, 0.35, 1);
 
-$gutter-base: 2rem; 
+$gutter-base: 2rem;
+$page-max-width : 2500px;
 
+$letter-spacing-100: -0.025em;
+$letter-spacing-200: -0.05em;
 //------------------------------
-
+@import "rfs";
 @import "./components/buttons";
 @import "header";
 @import "layout";
+@import "items_card";
+@import "exhibition";
+@import "library";
+@import "gallery";
 @import "./components/card_basic";
 @import "grid_test_1";
 
 //------------------------------
 
-.rfs-1{ font-size: map-get($font-scale, font-scale-68); }
-.rfs-2{ font-size: map-get($font-scale, font-scale-60); }
-.rfs-3{ font-size: map-get($font-scale, font-scale-48); }
-.rfs-4{ font-size: map-get($font-scale, font-scale-42); }
-.rfs-5{ font-size: map-get($font-scale, font-scale-36); }
-.rfs-6{ font-size: map-get($font-scale, font-scale-32); }
-
 //------------------------------
 
-
-html:focus-within{
-    scroll-behavior: smooth;    
-}
+html:focus-within{ scroll-behavior: smooth; }
 body {
     background-color: $color-body-ground;
     font-family: "Noto Sans","Noto Sans KR", "Malgun Gothic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-    overflow-x: hidden; letter-spacing: -0.025em;
+    overflow-x: hidden; letter-spacing: -0.025em; color:$color-text-base;
 }
 h1,h2,h3,h4,h5,h6,p {
     word-break: keep-all;
 }
+button { outline: none; border: transparent; }
 .container {
     position: relative; width:100%; margin: 0 auto;
     &.page-padding {
@@ -106,10 +116,9 @@ h1,h2,h3,h4,h5,h6,p {
     }
 }
 
-
 .btn-circle {
-    position: fixed; width: 152px; height: 152px; z-index: 100;
-    top: 120px; right: 40px; cursor: pointer; transition: top $duration-s;
+    position: absolute; width: 152px; height: 152px; z-index: 100;
+    top: 130px; right: 24px; cursor: pointer; transition: top $duration-s;
     .back {
         position: absolute; width: 100%; height: 100%;
         background-image: url(../img/btn_circle.svg);
@@ -135,166 +144,136 @@ h1,h2,h3,h4,h5,h6,p {
         to { transform: rotate(359.9deg);}
     }
 }
-.wrap {
-    position: relative; width: 100%; background-color: transparent;
+.wrap { position: relative; width: 100%; max-width: $page-max-width; margin: 0 auto; }
+.page-wrap {
+    position: relative; width: 100%; margin: 0 auto; border-top: 1px solid $color-ui-line-100;
 }
-#page-wrapper { background-color: transparent; }
 .btn-page-top {
     position: fixed; width:50px; height: 50px; background-color: black; display: block;
-    right:0; bottom: 80px; z-index: 100; opacity: 0; transition: opacity 0.3s;
+    right:0; bottom: 80px; z-index: 200; opacity: 0; transition: opacity 0.3s;
     svg { position: absolute; margin: auto; left:0; right:0; top:0; bottom:0;}
 }
 
+.footer{
+    position: relative; width: 100%; 
+    padding-top: 1rem; margin: 0 auto; background-color: $color-ui-solid-500;
+    border-top: 1px solid #404040;
+    &::after {
+        content: ''; display: block; position: absolute;
+        width:100%; height: 1px; background-color: #404040;
+        top: 70px;
+    }
+    .row-1 {
+        width: 84%; position: relative; margin:0 auto;
+        .footer-1 {
+            width: 409px; margin-top: 6px;
+        }
+        .footer-2 {
+            position: absolute; width: 444px; right:0;
+        }
+    }
+    .row-2 {
+        width: 84%; position: relative;
+        padding: $spacer-l2 0 $spacer-layout-7x 0; margin: $spacer-l2 auto 0 auto; 
+
+        .footer-3 {
+            width: 395px; 
+        }
+        .footer-4 {
+            position: absolute; width: 400px; right:0;
+        }
+    }
+}
+.footer-sitemap{
+    position: relative; width: 100%; padding: 5rem 0 4rem 0;
+    background-color: $color-ui-solid-500; color: $white; // margin-top: $spacer-layout-7x;
+    .sitemap-wrap{
+        width: 70vw; margin: 0 auto;
+        display: grid; justify-content: center;
+        grid-template-columns: repeat(7, 1fr);
+        ul{
+            width:100%; max-width: 160px; font-size: map-get($font-scale, font-scale-18 );
+            font-weight: bold;
+            li{
+                a{
+                    font-size: map-get($font-scale, font-scale-16 ); font-weight: normal;
+                    color:$white; line-height: 2em;
+                }
+            }
+        }
+    }
+}
+
 //--------------------
-.fixed { position: fixed;}
+
+.page-row-padding { padding:0 $spacer*7; }
+.page-vertical-padding { padding:$spacer*7 0; }
 
 .grid-16col {
     display: grid; position: relative;
     grid-template-columns: repeat(16, 1fr);
 }
-.exhibition-special {
-    grid-template-rows: repeat(18, 7vw);
-    .card-basic {
-        .card__thumbnail{
-            overflow: visible;
-        }
-        figure {
-            
-            img {
-                object-fit: cover;
-                max-width: 100%; height: 100% !important;
-            }
-            .ex-cover {
-                display: block; position: absolute; width: 100%; height: 100%;
-                background-color: white; transform-origin: top center; top:0; left:0;
-                transition: height 1s;
-                &.is-active {
-                    height: 0;
+.flexbox-container {
+    position: relative; width: 100%; margin: 0 auto 10rem auto; max-width: $page-max-width;
+    display: grid;  grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around; 
+}
+.nav-bar-2level {
+    width: 100%; margin: 2rem auto; text-align: center;
+    ul{ 
+        li{
+            display: inline-block; line-height: $spacer-l3; margin:0 $spacer;
+            a{ 
+                position: relative; font-size: map-get($font-scale, font-scale-24); 
+                color: $color-text-gray-300;
+                &::after {
+                    content:''; display: block; position: absolute;
+                    width: 0%; height: 3px; background-color: $color-p-red;
+                    bottom: -7px; transition: width 0.25s; z-index: -1;
                 }
-            }   
-        }
-        .category-tag {
-            top: 0; left:0; height: 32px; width: 80px;
-            transform-origin: 0% 0%; transform: rotateZ(90deg); background-color: transparent;
-            &::before {
-                content: ''; display: block; position: absolute;
-                width: 14px; height: 28px; background-image: url(../img/category_tag.svg);
-                transform-origin: 0% 0%; transform: rotateZ(-90deg); 
-                left:0; top:48px;
-            }
-        }
-        .card__body {
-            .title {
-                font-size:map-get($font-scale, font-scale-28); letter-spacing: -0.05em;
+                &.active {
+                    color:$color-text-base; font-weight: bold;
+                    &::after{
+                        width: 100%;
+                    }
+                }
             }
         }
     }
-    #ex-special-1 { grid-column: 3/10; grid-row-start: 2;}
-    #ex-special-2 { grid-column: 11/15; grid-row-start: 7;}
-    #ex-special-3 { grid-column: 3/9; grid-row-start: 12;}
-    #ex-special-4 { grid-column: 10/14; grid-row-start: 14;}    
 }
-.color-box {
-    display: block; position: absolute; z-index: 10;
-    width:100%; height:100%;
-    &.color-box-1 {
-        grid-column: 8/11; grid-row: 1/5;
-        background-color: $color-p-red; mix-blend-mode: multiply;
-        transform-origin: top center;
-        //animation: boxReveal-1 2s; 
+.nav-bar-3level {
+    width: 100%; margin: 2rem auto; text-align: center;
+    ul{ 
+        li{
+            display: inline-block; line-height: $spacer-l2; margin:0; padding: 0 $spacer*5;
+            border-top:1px solid $color-ui-line-100;
+            border-bottom:1px solid $color-ui-line-100;
+            border-right:1px solid $color-ui-line-100; 
+            border-left:1px solid $color-ui-line-100;
+            &:nth-child(2n){ border-right: 0px; border-left: 0px; }                   
+            &.active {
+                color:$color-text-base; font-weight: bold;
+                border: 1px solid $black;
+                a {
+                    color: $color-text-base;
+                }                   
+            }
+            
+            a{ 
+                position: relative; font-size: map-get($font-scale, font-scale-16); 
+                display: block; line-height: 3.5em; 
+                color: $color-text-gray-300;
+                
+            }
+        }
     }
-    &.color-box-2 {
-        grid-column: 14/16; grid-row: 5/8;
-        background-color: $color-p-green; mix-blend-mode: multiply;
-        transform-origin: top right;
-        //animation: boxReveal-2 2s; 
-    }
-    &.color-box-3 {
-        grid-column: 2/4; grid-row: 13/14;
-        background-color: $color-p-amber; mix-blend-mode: multiply;
-        transform-origin: top center;
-        //animation: boxReveal-1 2s; 
-    }
-    &.color-box-4 {
-        grid-column: 13/15; grid-row: 13/16;
-        background-color: $color-p-violet; mix-blend-mode: multiply;
-        transform-origin: top center;
-        animation: boxLoop-1 6s; animation-iteration-count: infinite;
-    }
-}
-
-.section-exhibition-special{
-    position: relative; width: 100vw; min-height: 100vh; top: 100vh;
-}
-@keyframes boxLoop-1{
-    0%{ transform: scaleY(0.1); }
-    50%{ transform: scaleY(1); }
-    100%{ transform: scaleY(0.1); }
-}
-@keyframes boxReveal-1{
-    0%{ transform: scaleY(0); }
-    100%{ transform: scaleY(1); }
-}
-@keyframes boxReveal-2{
-    0%{ transform: scaleX(0); }
-    100%{ transform: scaleX(1); }
 }
 //--------------------
 
 .section-a-1 {
     position: relative; width: 100vw; min-height: 100vh; 
 }
-.section-a-2 {
-    position: relative; width: 100vw; height: 100vh; max-height: 840px;
-    .inner-wrap {
-        width: 87.5vw; display: grid; margin: 180px auto 100px auto;
-        grid-template-columns: repeat(4, 1fr);
-        justify-content: space-between;
-    }
-    .card-ex-long{
-        position: relative; width:100%; min-height: 20vh;
-        @include backImageCover; padding: $spacer-l1;
-        &::after {
-            content:''; display: block; width: 100%; height: 100%;
-            position: absolute; top:0; left:0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 15%,rgba(0,0,0,0.2) 70%);
-        }
-        &#ex-long-1{ background-image:url(../img/dummy/a_card_long_1.png); }
-        &#ex-long-2{ background-image:url(../img/dummy/a_card_long_2.png); }
-        &#ex-long-3{ background-image:url(../img/dummy/a_card_long_3.png); }
-        &#ex-long-4{ background-image:url(../img/dummy/a_card_long_4.png); }
-        .inner {
-            position: absolute; width:100%; height: 100%; top:0; left:0;
-            color:white; z-index: 10;
-            h4{
-                padding: 0 $spacer-l1 0 $spacer-l2;
-            }
-            .detail-info{
-                padding: $spacer-l2 $spacer-l2 0 $spacer-l2; margin-top: $spacer-l1;
-                font-size: map-get($font-scale, font-scale-16);
-                display: flex; align-items: center; padding-top: $spacer-s2;
-                .divide {
-                    display: inline-block; width:1px; height: $spacer;
-                    background-color: white; margin:2px $spacer 0 $spacer;
-                    opacity: 0.3;
-                }
-            }
-        }
-    }
-    .a-back-copy {
-        position: absolute; top: -140px;
-    }
-}
-@media (min-width: $bp-xl) {
-    .section-a-2 {
-        .inner-wrap{
-            grid-gap: 32px; 
-        }
-        .card-ex-long{           
-            padding: $spacer-l2;     
-        }
-    }
-}
+
 .section-a-3{
     position: relative; width: 100vw; padding: 0;
     display: flex;
@@ -304,7 +283,14 @@ h1,h2,h3,h4,h5,h6,p {
         .text-ani-cell{
             position: relative; background-color: black; overflow: hidden;
         }
-    }  
+    }
+    .inner-wrap {
+        width: 87.5vw; margin:0 auto;
+        padding: 0; background-color:black;
+        .text-ani-cell{
+            position: relative; background-color: black; overflow: hidden;
+        }
+    } 
 }
 .grid-line-box {
     width:100%; display: grid; 
@@ -367,61 +353,18 @@ h1,h2,h3,h4,h5,h6,p {
         }
     }
 }
-.section-a-4 {
-    position: relative; width: 87.5vw; margin: 0 auto;
-    .full-img {
-        max-width: 100%;
-    }
-}
+
 .section-back-color {
     position: fixed; width: 100vw; height: 100vw; top:0; left:0;
     background-color: #fff; z-index: -1;
 }
-.section-a-sitemap{
-    position: relative; width: 100%; padding: 5rem 0 4rem 0;
-    .sitemap-wrap{
-        width: 70vw; margin: 0 auto;
-        display: grid; justify-content: center;
-        grid-template-columns: repeat(6, 1fr);
-        ul{
-            width:100%; max-width: 160px; font-size: map-get($font-scale, font-scale-18 );
-            font-weight: bold;
-            li{
-                a{
-                    font-size: map-get($font-scale, font-scale-16 ); font-weight: normal;
-                }
-            }
-        }
-    }
-}
-.footer-a {
-    position: relative; width: 87.5vw; border-top: 2px solid black;
-    padding-top: 1rem; margin: 0 auto;
-    .row-1 {
-        width: 100%; position: relative;
-        .footer-1 {
-            width: 409px; margin-top: 6px;
-        }
-        .footer-2 {
-            position: absolute; width: 444px; right:0;
-        }
-    }
-    .row-2 {
-        width: 100%; position: relative; border-top: 1px solid #DDDDDD;
-        padding: $spacer 0 $spacer-l4 0; margin-top: $spacer-l2;
 
-        .footer-3 {
-            width: 205px; 
-        }
-        .footer-4 {
-            position: absolute; width: 400px; right:0;
-        }
-    }
-}
+
 //----------------------------
 
 .hero-ex-wrap {
-    position: relative; width: 100vw; height: calc(100vh - 110px); max-height: 760px;
+    position: relative; width: 100%; height: calc(100vh - 110px); max-height: 760px;
+    margin:0 auto; overflow: hidden;
     .hero-slide {
         @include backImageCover; position: absolute; width:100%; height: 100%;
         &#hero-ex-1 { background-image: url(../img/b_hero_1.png);}
@@ -450,29 +393,43 @@ h1,h2,h3,h4,h5,h6,p {
             }
         }
     }
+    .slider-control { 
+        position: absolute; width: 283px; 
+        left: 0; bottom: 0;
+        img { max-width: 100%;}
+    }
     
 }
 //----------------------------
 
 .slider-frame{
-    position: relative; margin: 0 auto; 
+    position: relative; margin: 0 auto;  width:100%; height: auto; padding: 2rem 0 14rem 0;
+    overflow: hidden; max-width: $page-max-width; margin-bottom: 8rem;
+    //border: 1px solid red;
     
     .slider-container{
-        transition: margin-left .2s ease, left .5s ease;
-        position: absolute; left: 0;
+        position: relative; left: 0; width:100%; height: 100%; display: flex;
         .slide{
-            position: relative; float: left; top: 0;
-            transition: width .2s ease, height .2s ease, top .2s ease;
-            cursor: pointer;
+            position: relative; top: 0; width: calc(25% - 70px); min-height: calc(20vw + 100px);
+            cursor: pointer; transform-origin: top center; flex-shrink: 0;
+            transition: transform $duration-s;
+            //border: 1px solid red;
+            &:nth-child(1){
+                margin-left: calc(100vw / 16);
+            }
+            &:hover {
+                transform: scale(1.075);
+            }
             .slide-inner{
-                position: absolute; width:100%; height:100%; padding: 0 18px;
+                position: absolute; width:100%; height:100%; padding-right: 48px;
                 display: flex; flex-direction: column;
                 &:hover .thumb .card-detail-wrap {
                     opacity: 1;
                 }
                 .thumb{
                     position: relative; @include backImageCover; padding-top: 146%;
-                    border:1px solid #CECECE;
+                    border:1px solid #CECECE; width:100%;
+                    
                     .card-detail-wrap{
                         position: absolute; width:100%; height: 70px; bottom:0;
                         transition: opacity 0.2s; opacity: 0;
@@ -509,10 +466,8 @@ h1,h2,h3,h4,h5,h6,p {
         }
     }
 .slider-title-wrap{
-    position: relative; width:100%; height: 150px; padding: 6rem 0 0 5rem;
-    &.second {
-        //margin-top: 19rem;
-    }
+    position: relative; width:88%; margin: auto; margin-top: $spacer-layout-6x;
+    
     .btn{
         width: 56px; height:56px; background: white;
         position: absolute; z-index: 1000; cursor: pointer;
@@ -538,58 +493,34 @@ h1,h2,h3,h4,h5,h6,p {
     display: block; width: 100%; height: 1px; border-bottom: 1px solid #000;
     margin: 1.25rem 0 1.5rem 70px; 
 }
-.section-b-2 {    
-    position: relative; width:100%; min-height:50vh; margin-top: 26rem;
-    overflow: hidden;
-    .divide-line{
-        display: block; width:100%; height:1px; background-color: black;
-        opacity: .2;
-    }
-    .inner-wrap { 
-        width: 120vw; min-width: 1600px; display: flex; flex-wrap: nowrap;
-        margin-left: 5rem; margin-top: $spacer-l2;
-        .divide-line {
-            display: block; width: 1px; height:100%;
-            background-color: gray;
-        }
-        .b-2-card {
-            position: relative; width: 20vw; margin-left: 45px;
-            &:nth-child(1){ margin-left: 0;}
-            img{ max-width: 100%; }
-            &::after {
-                content:''; display: block;
-                width:1px; height: 110%; position: absolute;
-                background-color: #D8D8D8; top:0; right:-22.5px;
-            }
-        }
-    }
-}
-.section-b-3 {
+
+.home-section-3 {
     position: relative; width: 100%; margin-top: 10rem; min-height: 100vh;
     display: grid; grid-template-columns: repeat(12, 1fr);
     gap: $spacer; border: $spacer solid black; background-color: black;
     .cell { position: relative; width: 100%; @include backImageCover; overflow: hidden;}
     .cell-1 {
-        grid-column: 1/5; height: 324px; background-color: #2E2D2D;
+        grid-column: 1/5; height: 324px; background-color: #1D1D1D;
+        border:1px solid #424242;
         display: flex; align-items: center; justify-content: center; padding:$spacer-l2;
         .notice { max-width: 100%; width:485px; }
     }
     .cell-2 {
-        grid-column: 5/9; height: 324px; background-color: black;
+        grid-column: 5/9; height: 324px; background-color: #1D1D1D;
         border:1px solid #424242;
         background-image: url(../img/b_kid_back.png); background-size: 408px 245px;
         background-position: bottom right;
         h3{ color:white; padding: $spacer-l3; }
     }
     .cell-3 {
-        grid-column: 9/13; height: 324px; background-color: #B88340;
+        grid-column: 9/13; height: 324px; background-color: #836846;
         display: flex; align-items: center; justify-content: center; padding:$spacer-l2;
-        img { max-width: 100%; width: 518px; }
+        img { max-width: 96%; width: 480px; }
 
     }
     .cell-4 {
         grid-column: 1/13; height: 940px; text-align: center; background-color: #6C7173;
-        img{ max-width: 1468px; width: 100%; margin-top: 7rem; }
+        img{ max-width: 1348px; width: 100%; margin-top: 6.5rem; }
     }
     .cell-5 {
         grid-column: 1/7;
@@ -601,6 +532,17 @@ h1,h2,h3,h4,h5,h6,p {
     .cell-6 {
         grid-column: 7/13; 
         background-image: url(../img/b_location.png); height: 800px;
+        .parking-guide {
+            position: absolute; width: 100%; height: 146px;
+            left:0; bottom:0; background-color: rgba(0,0,0,0.6);
+            p { 
+                color: $white; padding: 3.25rem 0 0 8rem;
+            }
+            .pictogram {
+                position: absolute; width: 64px; height: 64px; top: 2.5rem; left:2.5rem;
+                img { max-width: 100%;}
+            }
+        }
     }
 }
 //----------------------------

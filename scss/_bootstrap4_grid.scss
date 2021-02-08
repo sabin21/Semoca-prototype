@@ -66,7 +66,7 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1620px,
+  xxl: 1920px,
   xxxl: 2200px
 ) !default;
 
@@ -303,6 +303,7 @@ $grid-gutter-width:           32px !default;
   
   @if $enable-grid-classes {
     .container-fluid {
+      max-width: 2400px;
       @include make-container();
     }
   }
