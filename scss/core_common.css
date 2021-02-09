@@ -3349,6 +3349,24 @@ html {
   background-image: url(../img/header_lang.png);
 }
 
+.header.type-1 .logo {
+  height: 60px;
+  background-image: url(../img/common/logo_emblem_black.png);
+}
+
+.header.type-1 .menu-wrap {
+  left: 130px;
+}
+
+.header.type-2 .logo {
+  height: 60px;
+  background-image: url(../img/common/logo_b_black.png);
+}
+
+.header.type-2 .menu-wrap {
+  left: 210px;
+}
+
 .header.dark-mode {
   position: absolute;
   top: 0;

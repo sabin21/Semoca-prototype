@@ -10,7 +10,8 @@ $headerHeight-xs : 56px;
         display: block; position: absolute; width: 40px; height: 40px;
         margin: auto; left:0; right:0; 
         background-image: url(../img/common/logo_long_dark.png);
-        background-repeat: no-repeat; background-size:contain; 
+        background-repeat: no-repeat; background-size:contain;
+        
     }
     .burger-menu-wrap{
         display: block; width:40px; height: 40px;
@@ -71,6 +72,22 @@ $headerHeight-xs : 56px;
         }
         .btn-lang {            
             background-image: url(../img/header_lang.png);
+        }
+    }
+    &.type-1{
+        .logo {
+            height: 60px; background-image: url(../img/common/logo_emblem_black.png);
+        }
+        .menu-wrap {
+            left: 130px;
+        }
+    }
+    &.type-2{
+        .logo {
+            height: 60px; background-image: url(../img/common/logo_b_black.png);
+        }
+        .menu-wrap {
+            left: 210px;
         }
     }    
 }
