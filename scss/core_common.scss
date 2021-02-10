@@ -1,28 +1,25 @@
 
+//-------------------------------------
+// Reset 및 Reset을 위한 기본 변수 설정, 반복 사용되는 Mixins
+
 @import "./vars/variables";
 @import "reboot";
 @import "mixins";
 
-@import "ratio";
-@import "util";
-@import "bootstrap4_grid";
+//-------------------------------------
+// 한글,영문 기본서체
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap');
 
 //-------------------------------------
-// Variables
-//-------------------------------------
+// Design System - Fundamental 변수 설정
 
 $color-body-ground : #ffffff;
 $color-p-red : #CA1036;
 $color-p-green : #68BA9E;
 $color-p-amber: #E3943D;
 $color-p-violet: #7775B6;
-$color-text-deactive : #80898F;
-$color-ui-line-1 : #373C41;
-$color-ui-back-dark: #0B0E10;
-$color-ui-line-dark: #252628;
 
 $color-ui-line-100: #E8E8E8;
 $color-ui-line-200: #E0E0E0;
@@ -39,9 +36,7 @@ $color-text-base : $black;
 
 
 // Typography
-//
-// Type Scale Set
-// Xn = Xn-1 + {INT[(n-2)/4] + 1} * 2
+// -- Type Scale Set
 
 $font-scale:(
     font-scale-12 : 0.75rem,
@@ -63,40 +58,61 @@ $font-scale:(
     font-scale-92 : 5.75rem
 );
 
-// Breakpoint & duration
+$letter-spacing-100: -0.025em;
+$letter-spacing-200: -0.05em;
 
+// Breakpoints & Grid Setting Value
+//
 $bp-xs: 0;
 $bp-sm: 576px;
 $bp-md: 768px;
-$bp-lg: 1000px;
+$bp-lg: 992px;
 $bp-xl: 1360px;
-$bp-xxl: 1700px;
+$bp-xxl: 1632px;
 
+$grid__bp-sm: 576;
+$grid__bp-md: 768;
+$grid__bp-lg: 992;
+$grid__bp-xl: 1360;
+$grid__bp-xxl: 1632;
+$grid__cols: 12;
+
+// Duration & Easing
+//
 $duration-s: 0.25s;
 $duration-m: 0.4s;
 $duration-l: 0.6s;
 $easing-cubic: cubic-bezier(0.65, 0, 0.35, 1);
 
-$gutter-base: 2rem;
 $page-max-width : 2500px;
 
-$letter-spacing-100: -0.025em;
-$letter-spacing-200: -0.05em;
+
+
 //------------------------------
+// 공통 스타일
+
+@import "responsive_grid";
+@import "ratio";
 @import "rfs";
+
+//------------------------------
+// Components 스타일
+
 @import "./components/buttons";
 @import "header";
 @import "layout";
 @import "items_card";
-@import "exhibition";
-@import "library";
 @import "gallery";
 @import "./components/card_basic";
-@import "grid_test_1";
 
 //------------------------------
+// 메뉴별 별도 스타일
+
+@import "exhibition";
+@import "library";
 
 //------------------------------
+// 
 
 html:focus-within{ scroll-behavior: smooth; }
 body {
@@ -109,13 +125,64 @@ h1,h2,h3,h4,h5,h6,p {
     word-break: keep-all;
 }
 button { outline: none; border: transparent; }
+
+//------------------------------
+// Responsive Grid 세부 설정
+
 .container {
     position: relative; width:100%; margin: 0 auto;
-    &.page-padding {
-        padding:0;
+    
+    &.grid-row-padding > .container__row > .col,
+    &.grid-row-padding > .container__row > [class*="col-"] {
+        padding: 0 6px;
+    }
+    @media (min-width: $bp-md) {
+        &.grid-row-padding > .container__row > .col,
+        &.grid-row-padding > .container__row > [class*="col-"] {
+            padding: 0 8px;
+        }
+    }
+    @media (min-width: $bp-lg) {
+        &.grid-row-padding > .container__row > .col,
+        &.grid-row-padding > .container__row > [class*="col-"] {
+            padding: 0 12px;
+        }
+    }
+    @media (min-width: $bp-xl) {
+        &.grid-row-padding > .container__row > .col,
+        &.grid-row-padding > .container__row > [class*="col-"] {
+            padding: 0 16px;
+        }
+    }
+    @media (min-width: $bp-xxl) {
+        &.grid-row-padding > .container__row > .col,
+        &.grid-row-padding > .container__row > [class*="col-"] {
+            padding: 0 20px;
+        }
+    }
+}
+.container--wrapper{
+    position: relative; width:100%; margin: 0 auto;
+    padding: 0 8px;
+    @media (min-width: $bp-sm) {
+        padding: 0 24px;
+    }
+    @media (min-width: $bp-md) {
+        padding: 0 36px;
+    }
+    @media (min-width: $bp-lg) {
+        padding: 0 44px;
+    }
+    @media (min-width: $bp-xl) {
+        padding: 0 96px;
+    }
+    @media (min-width: $bp-xxl) {
+        padding: 0 128px;
     }
 }
 
+//------------------------------
+// Home
 .btn-circle {
     position: absolute; width: 152px; height: 152px; z-index: 100;
     top: 130px; right: 24px; cursor: pointer; transition: top $duration-s;

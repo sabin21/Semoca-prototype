@@ -7,11 +7,10 @@
 
     <link href="./scss/core_common.css" rel="stylesheet">
     <link href="./scss/system_doc/doc_common.css" rel="stylesheet">
-    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
 
 </head>
 
-<body>
+<body class="doc-body">
     <div class="doc-wrap">
         <div class="left-menu__wrap">
             <ul class="menu-level-1">
@@ -20,7 +19,7 @@
                     <ul class="menu-level-2">
                         <li><a href="">Color System</a></li>
                         <li><a href="">Typography</a></li>
-                        <li><a href="./pages/system-doc/grid_layout.html">Grid - Page Layout</a></li>
+                        <li><a href="javascript:void(0);" onclick='openFrame("doc_pages/responsive_grid.html")'>Grid</a></li>
                         <li><a href="">Spacing</a></li>
                         <li><a href="">Iconography</a></li>
                     </ul>
@@ -29,7 +28,7 @@
                         <li><a href="">Accordion</a></li>
                         <li><a href="">Breadcrumb</a></li>
                         <li><a href="">Buttons</a></li>
-                        <li><a href="./pages/guide_card-basic.html">Card-basic</a></li>
+                        <li><a href="">Card-basic</a></li>
                         <li><a href="">Cards</a></li>
                         <li><a href="">Cards</a></li>
                         <li><a href="">Cards</a></li>
@@ -43,23 +42,22 @@
                     </ul>
                     <h6>Pages</h6>
                     <ul class="menu-level-2">
-                        <li><a href="">Home-A</a></li>
-                        <li><a href="">Home-B</a></li>
+                        <li><a href="javascript:void(0);" onclick='openFrame("pages/00_home.html")'>Home</a></li>
                         <li><a href="">Landing-exhibition</a></li>
                         <li><a href="">Landing-</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <div class="doc-content__wrap">
-            <main id="swup" class="transition-fade">
-
-            </main>
-        </div>
+        <iframe class="doc-content__wrap" id="doc-frame" src="doc_pages/home.html">
+            
+        </iframe>
     </div>
+    <script src="js/jquery/jquery-1.12.4.min.js"></script>
     <script>
-        
-        const swup = new Swup();
+        function openFrame(url){
+            $('#doc-frame').attr('src', url);
+        }
     </script>
 </body>
 </html>

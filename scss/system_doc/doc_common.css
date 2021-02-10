@@ -1,3 +1,7 @@
+.doc-body {
+  overflow-y: hidden;
+}
+
 .doc-wrap {
   position: relative;
   width: 100%;
@@ -35,12 +39,21 @@
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  padding-left: 300px;
-  background-color: #F4F4F4;
+  padding-left: 260px;
 }
 
-.doc-content__wrap main {
-  position: relative;
+.grid-cell {
+  width: 100%;
+  min-height: 150px;
+  background-color: #d6d6d6;
+}
+
+.grid-cell:nth-child(even) {
+  background-color: #a3a3a3;
+}
+
+.grid-cell .grid-cell-inbox {
   width: 100%;
   height: 100%;
+  border: 1px solid black;
 }
