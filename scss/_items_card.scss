@@ -31,7 +31,7 @@
         position: relative; width:100%; margin-top: $spacer-l1;
         .title {
             @include rfs-24;
-            letter-spacing: $letter-spacing-200;
+            letter-spacing: $letter-spacing-s2;
             font-weight: bold; margin-top:0;
         }
         .detail-info{

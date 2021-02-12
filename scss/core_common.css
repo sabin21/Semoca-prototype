@@ -9,11 +9,10 @@
 
 body {
   margin: 0;
-  font-family: "Noto Sans", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
-  color: #212529;
   text-align: left;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
@@ -30,10 +29,10 @@ main {
 
 hr {
   margin: 1rem 0;
-  color: #dee2e6;
-  background-color: #dee2e6;
+  color: #CECECE;
+  background-color: #CECECE;
   border: 0;
-  opacity: 0.25;
+  opacity: 1;
 }
 
 pre {
@@ -43,7 +42,7 @@ pre {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -124,11 +123,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
-}
-
-small {
-  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 mark {
@@ -153,12 +148,12 @@ sup {
 }
 
 a {
-  color: #212529;
+  color: #000;
   text-decoration: none;
 }
 
 a:hover {
-  color: black;
+  color: #000;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -1352,14 +1347,10 @@ template {
 
 .btn {
   display: inline-block;
-  font-family: "san-serif";
-  font-weight: 700;
-  line-height: 1.5em;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid transparent;
 }
 
 .header {
@@ -1568,7 +1559,7 @@ template {
   -webkit-transition: height 0.25s;
   transition: height 0.25s;
   z-index: 200;
-  border-top: 1px solid #E8E8E8;
+  border-top: 1px solid #E2E2E2;
   border-bottom: 1px solid #000;
   overflow: hidden;
 }
@@ -1849,7 +1840,7 @@ template {
   position: absolute;
   width: 1px;
   height: 100%;
-  background-color: #E0E0E0;
+  background-color: #E2E2E2;
   top: 0;
 }
 
@@ -2011,7 +2002,7 @@ template {
   min-height: 400px;
   background-color: #fff;
   padding: 5rem 0;
-  border-top: 1px solid #E8E8E8;
+  border-top: 1px solid #E2E2E2;
 }
 
 .related-category__wrapper .related-category__title {
@@ -2340,8 +2331,8 @@ template {
   width: 100%;
   height: 80px;
   margin-top: 1.5rem;
-  border-top: 1px solid #E8E8E8;
-  border-bottom: 1px solid #E8E8E8;
+  border-top: 1px solid #E2E2E2;
+  border-bottom: 1px solid #E2E2E2;
 }
 
 .library__view-content-wrap .right-wrap .pict-action-bar .copyright {
@@ -2361,7 +2352,6 @@ html:focus-within {
 }
 
 body {
-  background-color: #ffffff;
   font-family: "Noto Sans","Noto Sans KR", "Malgun Gothic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2372,11 +2362,6 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
   word-break: keep-all;
-}
-
-button {
-  outline: none;
-  border: transparent;
 }
 
 .container {
@@ -2427,13 +2412,13 @@ button {
 
 @media (min-width: 576px) {
   .container--wrapper {
-    padding: 0 24px;
+    padding: 0 16px;
   }
 }
 
 @media (min-width: 768px) {
   .container--wrapper {
-    padding: 0 36px;
+    padding: 0 24px;
   }
 }
 
@@ -2546,7 +2531,7 @@ button {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  border-top: 1px solid #E8E8E8;
+  border-top: 1px solid #E2E2E2;
 }
 
 .btn-page-top {
@@ -2739,10 +2724,10 @@ button {
   line-height: 2rem;
   margin: 0;
   padding: 0 5rem;
-  border-top: 1px solid #E8E8E8;
-  border-bottom: 1px solid #E8E8E8;
-  border-right: 1px solid #E8E8E8;
-  border-left: 1px solid #E8E8E8;
+  border-top: 1px solid #E2E2E2;
+  border-bottom: 1px solid #E2E2E2;
+  border-right: 1px solid #E2E2E2;
+  border-left: 1px solid #E2E2E2;
 }
 
 .nav-bar-3level ul li:nth-child(2n) {

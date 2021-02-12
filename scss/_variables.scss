@@ -1,40 +1,35 @@
 
 //-------------------------------------
-// Basic Color
-// Gray Scale
+// Color
 
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
 $black:    #000 !default;
 
-$body-color: $gray-900 !default;
+$color-p-red : #CA1036;
+$color-p-green : #68BA9E;
+$color-p-amber: #E3943D;
+$color-p-violet: #7775B6;
+
+$color-text-base : $black;
+$color-text-gray-200 : #909296;
+$color-text-gray-300 : #606265;
+
+$color-ui-line-100: #E2E2E2;
+$color-ui-line-200: #E2E2E2;
+$color-ui-line-300: #CECECE;
+$color-ui-line-400: #333333;
+
+$color-ui-solid-100: #F7F7F7;
+$color-ui-solid-500: #333333;
+$color-ui-solid-600: #1A1A1A;
 
 //-------------------------------------
-// Basic Spacing
+// Spacing
 
 $spacer: 1rem !default;
 
-$spacer-0: 0;
-$spacer-1: $spacer / 4;
-$spacer-2: $spacer / 2;
-$spacer-3: $spacer;
-$spacer-4: $spacer * 1.5;
-$spacer-5: $spacer * 2;
-$spacer-6: $spacer * 2.5;
-$spacer-7: $spacer * 3;
-$spacer-8: $spacer * 4;
-
 $spacer-s4: $spacer / 4;
 $spacer-s2: $spacer / 2;
-$spacer-base: $spacer;
 $spacer-l1: $spacer * 1.5;
 $spacer-l2: $spacer * 2;
 $spacer-l3: $spacer * 2.5;
@@ -49,26 +44,100 @@ $spacer-layout-6x: $spacer*6;
 $spacer-layout-7x: $spacer*7;
 $spacer-layout-8x: $spacer*8;
 
+
 //-------------------------------------
 // Typography
 
-$font-family-sans-serif:     "Noto Sans", "Noto Sans KR",system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// Type Scale Set
+
+$font-scale:(
+    font-scale-12 : 0.75rem,
+    font-scale-14 : 0.875rem,
+    font-scale-16 : 1rem,
+    font-scale-18 : 1.125rem,
+    font-scale-20 : 1.25rem,
+    font-scale-24 : 1.5rem,
+    font-scale-28 : 1.75rem,
+    font-scale-32 : 2rem,
+    font-scale-36 : 2.25rem,
+    font-scale-42 : 2.625rem,
+    font-scale-48 : 3rem,
+    font-scale-54 : 3.375rem,
+    font-scale-60 : 3.75rem,
+    font-scale-68 : 4.25rem,
+    font-scale-76 : 4.75rem,
+    font-scale-84 : 5.25rem,
+    font-scale-92 : 5.75rem
+);
+
+$letter-spacing-base: 0em;
+$letter-spacing-s1: -0.025em;
+$letter-spacing-s2: -0.05em;
+
+// Breakpoints & Grid Setting Value
+//
+$bp-xs: 0;
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1360px;
+$bp-xxl: 1632px;
+
+$grid__bp-sm: 576;
+$grid__bp-md: 768;
+$grid__bp-lg: 992;
+$grid__bp-xl: 1360;
+$grid__bp-xxl: 1632;
+$grid__cols: 12;
+
+// Duration & Easing
+//
+$duration-s: 0.25s;
+$duration-m: 0.4s;
+$duration-l: 0.6s;
+$easing-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+
+$page-max-width : 2500px;
+
+//-------------------------------------
+// Typography
+
+$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-family-base: $font-family-sans-serif;
 $font-family-code: $font-family-monospace;
 
+// Type Scale Set
+// Xn = Xn-1 + {INT[(n-2)/4] + 1} * 2
+// 
+$font-scale:(
+    font-scale-12 : 0.75rem,
+    font-scale-14 : 0.875rem,
+    font-scale-16 : 1rem,
+    font-scale-18 : 1.125rem,
+    font-scale-20 : 1.25rem,
+    font-scale-24 : 1.5rem,
+    font-scale-28 : 1.75rem,
+    font-scale-32 : 2rem,
+    font-scale-36 : 2.25rem,
+    font-scale-42 : 2.625rem,
+    font-scale-48 : 3rem,
+    font-scale-54 : 3.375rem,
+    font-scale-60 : 3.75rem,
+    font-scale-68 : 4.25rem,
+    font-scale-76 : 4.75rem,
+    font-scale-84 : 5.25rem,
+    font-scale-92 : 5.75rem
+);
+
+
 $font-size-root:              null !default;
 $font-size-base:              1rem !default;
-$font-size-tiny:              $font-size-base * .75; 
-$font-size-sm:                $font-size-base * .875 !default;
-$font-size-lg:                $font-size-base * 1.25 !default;
 
-$font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
@@ -90,12 +159,12 @@ $headings-font-weight:        700 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
-//
+//--------------------
 
 $hr-margin-y:                 $spacer !default;
-$hr-color:                    $gray-300 !default;
+$hr-color:                    $color-ui-line-300 !default;
 $hr-height:                   1px !default;
-$hr-opacity:                  .25 !default;
+$hr-opacity:                  1 !default;
 
 $legend-margin-bottom:        .5rem !default;
 $legend-font-size:            1.5rem !default;
@@ -105,16 +174,10 @@ $legend-font-weight:          null !default;
 //
 // Style anchor elements.
 
-$link-color:                              $gray-900 !default;
+$link-color:                              $black !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-color:                        $black !default;
 $link-hover-decoration:                   null !default;
-
-// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: 15% !default;
-
-$stretched-link-pseudo-element:           after !default;
-$stretched-link-z-index:                  1 !default;
 
 // Paragraphs
 //
@@ -127,12 +190,10 @@ $btn-font-weight: 700;
 $btn-line-height: 1.5em;
 $btn-border-width : 1px;
 
-
-
 //-------------------------------------
 
 $border-width:                1px !default;
-$border-color:                $gray-300 !default;
+$border-color:                $color-ui-line-300 !default;
 
 $border-radius:               .25rem !default;
 $border-radius-sm:            .2rem !default;

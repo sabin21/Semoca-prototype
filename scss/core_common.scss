@@ -1,92 +1,16 @@
 
 //-------------------------------------
-// Reset 및 Reset을 위한 기본 변수 설정, 반복 사용되는 Mixins
-
-@import "./vars/variables";
-@import "reboot";
-@import "mixins";
-
-//-------------------------------------
 // 한글,영문 기본서체
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 //-------------------------------------
-// Design System - Fundamental 변수 설정
+// Design Systme 기본변수, Reset, 반복 사용되는 Mixins
 
-$color-body-ground : #ffffff;
-$color-p-red : #CA1036;
-$color-p-green : #68BA9E;
-$color-p-amber: #E3943D;
-$color-p-violet: #7775B6;
-
-$color-ui-line-100: #E8E8E8;
-$color-ui-line-200: #E0E0E0;
-$color-ui-line-300: #CECECE;
-$color-ui-line-400: #333333;
-
-$color-ui-solid-100: #F7F7F7;
-$color-ui-solid-500: #333333;
-$color-ui-solid-600: #1A1A1A;
-
-$color-text-gray-200 : #909296;
-$color-text-gray-300 : #606265;
-$color-text-base : $black;
-
-
-// Typography
-// -- Type Scale Set
-
-$font-scale:(
-    font-scale-12 : 0.75rem,
-    font-scale-14 : 0.875rem,
-    font-scale-16 : 1rem,
-    font-scale-18 : 1.125rem,
-    font-scale-20 : 1.25rem,
-    font-scale-24 : 1.5rem,
-    font-scale-28 : 1.75rem,
-    font-scale-32 : 2rem,
-    font-scale-36 : 2.25rem,
-    font-scale-42 : 2.625rem,
-    font-scale-48 : 3rem,
-    font-scale-54 : 3.375rem,
-    font-scale-60 : 3.75rem,
-    font-scale-68 : 4.25rem,
-    font-scale-76 : 4.75rem,
-    font-scale-84 : 5.25rem,
-    font-scale-92 : 5.75rem
-);
-
-$letter-spacing-100: -0.025em;
-$letter-spacing-200: -0.05em;
-
-// Breakpoints & Grid Setting Value
-//
-$bp-xs: 0;
-$bp-sm: 576px;
-$bp-md: 768px;
-$bp-lg: 992px;
-$bp-xl: 1360px;
-$bp-xxl: 1632px;
-
-$grid__bp-sm: 576;
-$grid__bp-md: 768;
-$grid__bp-lg: 992;
-$grid__bp-xl: 1360;
-$grid__bp-xxl: 1632;
-$grid__cols: 12;
-
-// Duration & Easing
-//
-$duration-s: 0.25s;
-$duration-m: 0.4s;
-$duration-l: 0.6s;
-$easing-cubic: cubic-bezier(0.65, 0, 0.35, 1);
-
-$page-max-width : 2500px;
-
-
+@import "variables";
+@import "reboot";
+@import "mixins";
 
 //------------------------------
 // 공통 스타일
@@ -116,15 +40,11 @@ $page-max-width : 2500px;
 
 html:focus-within{ scroll-behavior: smooth; }
 body {
-    background-color: $color-body-ground;
     font-family: "Noto Sans","Noto Sans KR", "Malgun Gothic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     overflow-x: hidden; letter-spacing: -0.025em; color:$color-text-base;
 }
-h1,h2,h3,h4,h5,h6,p {
-    word-break: keep-all;
-}
-button { outline: none; border: transparent; }
+h1,h2,h3,h4,h5,h6,p { word-break: keep-all; }
 
 //------------------------------
 // Responsive Grid 세부 설정
@@ -165,10 +85,10 @@ button { outline: none; border: transparent; }
     position: relative; width:100%; margin: 0 auto;
     padding: 0 8px;
     @media (min-width: $bp-sm) {
-        padding: 0 24px;
+        padding: 0 16px;
     }
     @media (min-width: $bp-md) {
-        padding: 0 36px;
+        padding: 0 24px;
     }
     @media (min-width: $bp-lg) {
         padding: 0 44px;
@@ -211,10 +131,12 @@ button { outline: none; border: transparent; }
         to { transform: rotate(359.9deg);}
     }
 }
+
 .wrap { position: relative; width: 100%; max-width: $page-max-width; margin: 0 auto; }
 .page-wrap {
     position: relative; width: 100%; margin: 0 auto; border-top: 1px solid $color-ui-line-100;
 }
+
 .btn-page-top {
     position: fixed; width:50px; height: 50px; background-color: black; display: block;
     right:0; bottom: 80px; z-index: 200; opacity: 0; transition: opacity 0.3s;
@@ -251,6 +173,7 @@ button { outline: none; border: transparent; }
         }
     }
 }
+
 .footer-sitemap{
     position: relative; width: 100%; padding: 5rem 0 4rem 0;
     background-color: $color-ui-solid-500; color: $white; // margin-top: $spacer-layout-7x;

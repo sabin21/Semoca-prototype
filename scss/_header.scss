@@ -41,7 +41,7 @@ $headerHeight-xs : 56px;
                 display: inline-block; color:black; text-transform: uppercase;
                 font-size: map-get($font-scale, font-scale-18);
                 line-height: 3.25em; transition: color 0.25s; 
-                font-weight: bold; letter-spacing: $letter-spacing-100;
+                font-weight: bold; letter-spacing: $letter-spacing-s1;
                 &::after {
                     content:''; display: block; position: absolute;
                     width: 0%; height: 3px; background-color: $color-p-red;

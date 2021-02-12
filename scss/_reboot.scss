@@ -26,7 +26,6 @@ body {
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
-  color: $body-color;
   text-align: left;
   background-color: $white; 
   -webkit-text-size-adjust: 100%; 
@@ -57,8 +56,8 @@ pre {
 
 // Typography
 %heading {
-  margin-top: 0; // 1
-  margin-bottom: $headings-margin-bottom;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: $headings-font-family;
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
@@ -140,15 +139,9 @@ blockquote {
 
 b,
 strong {
-  font-weight: $font-weight-bolder;
+  font-weight: 700;
 }
 
-
-// Small
-
-small {
-  font-size: $font-size-sm;
-}
 
 // Mark
 
