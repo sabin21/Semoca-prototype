@@ -11,23 +11,27 @@ $color-p-amber: #E3943D;
 $color-p-violet: #7775B6;
 
 $color-text-base : $black;
-$color-text-gray-200 : #909296;
-$color-text-gray-300 : #606265;
+$color-text-100 : #D1CECC;
+$color-text-200 : #A5A3A2;
+$color-text-300 : #606265;
+$color-text-400 : #323234;
 
 $color-ui-line-100: #E2E2E2;
 $color-ui-line-200: #E2E2E2;
 $color-ui-line-300: #CECECE;
 $color-ui-line-400: #333333;
 
-$color-ui-solid-100: #F7F7F7;
-$color-ui-solid-500: #333333;
-$color-ui-solid-600: #1A1A1A;
+$color-ui-solid-100: #F6F6F6;
+$color-ui-solid-200: #D7D7D7;
+$color-ui-solid-300: #333333;
+$color-ui-solid-400: #1A1A1A;
 
 //-------------------------------------
 // Spacing
 
 $spacer: 1rem !default;
 
+$spacer-s8: $spacer / 8;
 $spacer-s4: $spacer / 4;
 $spacer-s2: $spacer / 2;
 $spacer-l1: $spacer * 1.5;
@@ -43,6 +47,8 @@ $spacer-layout-5x: $spacer*5;
 $spacer-layout-6x: $spacer*6;
 $spacer-layout-7x: $spacer*7;
 $spacer-layout-8x: $spacer*8;
+$spacer-layout-9x: $spacer*9;
+$spacer-layout-10x: $spacer*10;
 
 
 //-------------------------------------
@@ -98,6 +104,7 @@ $duration-l: 0.6s;
 $easing-cubic: cubic-bezier(0.65, 0, 0.35, 1);
 
 $page-max-width : 2500px;
+$container-max-width: 1632px;
 
 //-------------------------------------
 // Typography

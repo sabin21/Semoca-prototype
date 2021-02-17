@@ -11,6 +11,7 @@
 @import "variables";
 @import "reboot";
 @import "mixins";
+@import "util";
 
 //------------------------------
 // 공통 스타일
@@ -52,33 +53,87 @@ h1,h2,h3,h4,h5,h6,p { word-break: keep-all; }
 .container {
     position: relative; width:100%; margin: 0 auto;
     
-    &.grid-row-padding > .container__row > .col,
-    &.grid-row-padding > .container__row > [class*="col-"] {
+    &.col-padding--base > .container__row > .col,
+    &.col-padding--base > .container__row > [class*="col-"] {
         padding: 0 6px;
     }
     @media (min-width: $bp-md) {
-        &.grid-row-padding > .container__row > .col,
-        &.grid-row-padding > .container__row > [class*="col-"] {
+        &.col-padding--base > .container__row > .col,
+        &.col-padding--base > .container__row > [class*="col-"] {
             padding: 0 8px;
         }
     }
     @media (min-width: $bp-lg) {
-        &.grid-row-padding > .container__row > .col,
-        &.grid-row-padding > .container__row > [class*="col-"] {
+        &.col-padding--base > .container__row > .col,
+        &.col-padding--base > .container__row > [class*="col-"] {
             padding: 0 12px;
         }
     }
     @media (min-width: $bp-xl) {
-        &.grid-row-padding > .container__row > .col,
-        &.grid-row-padding > .container__row > [class*="col-"] {
+        &.col-padding--base > .container__row > .col,
+        &.col-padding--base > .container__row > [class*="col-"] {
             padding: 0 16px;
         }
     }
     @media (min-width: $bp-xxl) {
-        &.grid-row-padding > .container__row > .col,
-        &.grid-row-padding > .container__row > [class*="col-"] {
+        &.col-padding--base > .container__row > .col,
+        &.col-padding--base > .container__row > [class*="col-"] {
             padding: 0 20px;
         }
+    }
+    &.col-padding--zero {
+        padding:0 0;
+    }
+    @media (min-width: $bp-md) {
+        &.col-padding--zero { 
+            padding:0 8px; 
+        }  
+    }
+    @media (min-width: $bp-lg) {
+        &.col-padding--zero { 
+            padding:0 12px;
+        }  
+    }
+    @media (min-width: $bp-xl) {
+        &.col-padding--zero { 
+            padding:0 16px;
+        }  
+    }
+    @media (min-width: $bp-xxl) {
+        &.col-padding--zero { 
+            padding:0 20px;            
+        }  
+    }
+    &.col-padding--small > .container__row > .col,
+    &.col-padding--small > .container__row > [class*="col-"] {
+        padding: 0 2px;
+    }
+    &.col-padding--small {
+        &.container {
+            padding: 0 12px;
+        }
+    }
+    @media (min-width: $bp-md) {
+        &.col-padding--small > .container__row > .col,
+        &.col-padding--small > .container__row > [class*="col-"] {
+            padding: 0 4px;
+        } 
+    }
+    @media (min-width: $bp-lg) {
+        &.col-padding--small > .container__row > .col,
+        &.col-padding--small > .container__row > [class*="col-"] {
+            padding: 0 6px;
+        } 
+    }
+    @media (min-width: $bp-xl) {
+        &.col-padding--small > .container__row > .col,
+        &.col-padding--small > .container__row > [class*="col-"] {
+            padding: 0 8px;
+        } 
+    }
+    &.col-padding--big > .container__row > .col,
+    &.col-padding--big > .container__row > [class*="col-"] {
+        padding: 0 12px;
     }
 }
 .container--wrapper{
@@ -102,7 +157,19 @@ h1,h2,h3,h4,h5,h6,p { word-break: keep-all; }
 }
 
 //------------------------------
+// Page 공통
+
+.wrap { 
+    position: relative; width: 100%; max-width: $page-max-width; margin: 0 auto; 
+}
+.page-wrap {
+    position: relative; width: 100%; margin: 0 auto; 
+    border-top: 1px solid $color-ui-line-100;
+}
+
+//------------------------------
 // Home
+
 .btn-circle {
     position: absolute; width: 152px; height: 152px; z-index: 100;
     top: 130px; right: 24px; cursor: pointer; transition: top $duration-s;
@@ -132,10 +199,6 @@ h1,h2,h3,h4,h5,h6,p { word-break: keep-all; }
     }
 }
 
-.wrap { position: relative; width: 100%; max-width: $page-max-width; margin: 0 auto; }
-.page-wrap {
-    position: relative; width: 100%; margin: 0 auto; border-top: 1px solid $color-ui-line-100;
-}
 
 .btn-page-top {
     position: fixed; width:50px; height: 50px; background-color: black; display: block;
@@ -145,7 +208,7 @@ h1,h2,h3,h4,h5,h6,p { word-break: keep-all; }
 
 .footer{
     position: relative; width: 100%; 
-    padding-top: 1rem; margin: 0 auto; background-color: $color-ui-solid-500;
+    padding-top: 1rem; margin: 0 auto; background-color: $color-ui-solid-300;
     border-top: 1px solid #404040;
     &::after {
         content: ''; display: block; position: absolute;
@@ -176,7 +239,7 @@ h1,h2,h3,h4,h5,h6,p { word-break: keep-all; }
 
 .footer-sitemap{
     position: relative; width: 100%; padding: 5rem 0 4rem 0;
-    background-color: $color-ui-solid-500; color: $white; // margin-top: $spacer-layout-7x;
+    background-color: $color-ui-solid-300; color: $white; // margin-top: $spacer-layout-7x;
     .sitemap-wrap{
         width: 70vw; margin: 0 auto;
         display: grid; justify-content: center;
@@ -215,7 +278,7 @@ h1,h2,h3,h4,h5,h6,p { word-break: keep-all; }
             display: inline-block; line-height: $spacer-l3; margin:0 $spacer;
             a{ 
                 position: relative; font-size: map-get($font-scale, font-scale-24); 
-                color: $color-text-gray-300;
+                color: $color-text-300;
                 &::after {
                     content:''; display: block; position: absolute;
                     width: 0%; height: 3px; background-color: $color-p-red;
@@ -252,7 +315,7 @@ h1,h2,h3,h4,h5,h6,p { word-break: keep-all; }
             a{ 
                 position: relative; font-size: map-get($font-scale, font-scale-16); 
                 display: block; line-height: 3.5em; 
-                color: $color-text-gray-300;
+                color: $color-text-300;
                 
             }
         }
@@ -536,3 +599,27 @@ h1,h2,h3,h4,h5,h6,p { word-break: keep-all; }
     }
 }
 //----------------------------
+// sample
+
+.sample-wrap{
+    >.hero-wrap{
+        position: relative; width:100%; height: 600px;
+        background-color: darken($color-p-violet, 20%);
+        h1 { 
+            color:$white; font-size: map-get($font-scale, font-scale-68);
+        }
+        .hero-graphic {
+            display: block; position: absolute; width: 400px; height: 400px;
+            border-radius: 50%; top: 100px; left: 60%;
+            background-color: $color-p-violet;
+        }
+    }
+    >.section-1{
+        width: 100%;  margin-top: $spacer-layout-4x; overflow: hidden;
+        h4 { margin-top: $spacer-layout-8x;}
+    }
+    >.section-2 {
+        width: 100%; height: 100vh; @include backImageCover;
+        background-image: url(../img/dummy/wallpaper_01.png);
+    }
+}

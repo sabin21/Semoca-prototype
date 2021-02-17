@@ -51,7 +51,7 @@ $map-grid-props: (
 }
 
 .container {
-  max-width: $grid__bp-xxl * 1px;
+  max-width: $container-max-width;
   margin: 0 auto;
   &-fluid {
     margin: 0;
