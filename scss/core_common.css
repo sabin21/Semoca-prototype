@@ -2553,6 +2553,9 @@ template {
   height: calc(100% - 6rem);
   border: 1px solid #242424;
   background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .teaser-hero .right-block .block-frame .logo {
@@ -2562,7 +2565,7 @@ template {
   margin: auto;
   left: 0;
   right: 0;
-  top: 5rem;
+  top: calc(50% - 150px);
 }
 
 .teaser-hero .right-block .block-frame .logo img {
