@@ -50,7 +50,8 @@
             border: 1px solid #242424; background-color: $black;
             display: flex; 
             .logo { 
-                position: absolute; width: 80%; max-width: 298px; margin: auto; left:0; right: 0; top: calc(50% - 150px);
+                position: absolute; width: 80%; max-width: 298px; margin: auto; left:0; right: 0; 
+                top: calc(50% - 150px);
                 img { max-width: 100%;}
             }
             .divide-line {
