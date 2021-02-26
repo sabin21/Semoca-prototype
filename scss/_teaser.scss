@@ -1,0 +1,94 @@
+
+
+.teaser {
+    background-color: $black; color:$white;
+    .wrap {
+        max-width: 1920px;
+    }
+}
+.teaser-hero {
+    position: relative; width:100%; height:100vh; max-height: 900px;
+    .video-wrap {
+        position: absolute; width: 100%; height: 100%;
+        overflow: hidden;
+        video {
+            position: absolute; width:100%; height: 100%;
+            left:50%; top:50%; object-fit: cover;
+            transform: translate(-50%, -50%);
+            filter: saturate(0.4);
+        }
+        &::before{
+            content:''; display: block; position: absolute;
+            width:100%; height: 100%; top:0; left:0;
+            background-color: rgba(0, 0, 0, 0.7); z-index: 2;
+        }
+    }
+    .left-block {
+        position: absolute; width: 66.66666%; height: 100%; left: 0; z-index: 10;
+        padding: 10rem; display: flex; align-items: center;
+        h1{ 
+            color: $white; width:100%; text-align: center; 
+            //font-weight: normal;
+            letter-spacing: 0.025em; line-height: 1.4em;
+        }
+        img {
+            position: absolute; width: 378px; bottom: 10%; left:5vw;
+        }
+    }
+    .right-block {
+        position: absolute; width: 33.33333%; height: 100%; right: 0;
+        background-color: $black; z-index: 4; display: flex; justify-content: center; align-items: center;
+        @include backImageCover; 
+        //background-image: url(../img/teaser/hero_pattern.png);
+        &::before {
+            content:''; display: block; position: absolute;
+            width:100%; height: 100%; top:0; left:0;
+            background-color: rgba(0, 0, 0, 0.7); 
+        }
+        .block-frame {
+            position: relative; width: calc(100% - 6rem); height: calc(100% - 6rem);
+            border: 1px solid #242424; background-color: $black;
+            
+            .logo { 
+                position: absolute; width: 80%; max-width: 298px; margin: auto; left:0; right: 0; top: 5rem;
+                img { max-width: 100%;}
+            }
+            .divide-line {
+                position: absolute; display: block; width: 80%; height: 1px; background-color: #242424;
+                margin: auto; left:0; right: 0; top: 22rem;
+            }
+        }
+    }
+}
+.main-artwork{
+    position: relative; width: 100%; height: 100vh; max-height: 940px;
+    background-color: #141414; display: flex; align-items: center; overflow: hidden;
+    .swipe-title {
+        width:100%; padding-left:10vw; display:flex; margin-bottom: 3rem;
+        .swipe-control {
+            position: absolute; right: 3rem; display: flex; align-items: center;
+            .divide { 
+                width: 1px; height: 24px; background-color: $white;
+                opacity: 0.2; display: inline-block; margin: 0 8px;
+            }
+            svg { cursor: pointer; display: inline-block;}
+        } 
+    }
+    .slide-wrap {
+        position: relative; width:100%; padding-left: 10vw; 
+        .slick-list {
+            //overflow: hidden;
+        }
+        .slide{
+            margin: 0 12px;
+            img{ max-height: 454px;}
+            h4{
+                margin-top: 16px; font-size: 20px;
+            }
+        }
+    }
+}
+.con-full{
+    position: relative; width: 100%; margin-bottom: 10rem;
+    img { max-width: 100%;}
+}

@@ -1208,7 +1208,7 @@ template {
   font-size: 0.75rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .rfs-12 {
     font-size: 0.75rem;
   }
@@ -1224,7 +1224,7 @@ template {
   font-size: 0.875rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .rfs-14 {
     font-size: 0.875rem;
   }
@@ -1240,7 +1240,7 @@ template {
   font-size: 1rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .rfs-16 {
     font-size: 1rem;
   }
@@ -1272,13 +1272,19 @@ template {
   font-size: 1rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .rfs-20 {
     font-size: 1.125rem;
   }
 }
 
 @media (min-width: 1360px) {
+  .rfs-20 {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1632px) {
   .rfs-20 {
     font-size: 1.25rem;
   }
@@ -1288,13 +1294,13 @@ template {
   font-size: 1.125rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .rfs-24 {
     font-size: 1.25rem;
   }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1632px) {
   .rfs-24 {
     font-size: 1.5rem;
   }
@@ -1304,25 +1310,25 @@ template {
   font-size: 1.125rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .rfs-28 {
     font-size: 1.25rem;
   }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1632px) {
   .rfs-28 {
     font-size: 1.75rem;
   }
 }
 
 .rfs-32 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .rfs-32 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1336,7 +1342,7 @@ template {
   font-size: 1.5rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .rfs-36 {
     font-size: 2rem;
   }
@@ -1884,13 +1890,13 @@ template {
   margin-top: 0;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .item-poster-wrap .item-body .title {
     font-size: 1.25rem;
   }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1632px) {
   .item-poster-wrap .item-body .title {
     font-size: 1.5rem;
   }
@@ -2428,6 +2434,229 @@ template {
   float: right;
   margin-top: 14px;
   cursor: pointer;
+}
+
+.teaser {
+  background-color: #000;
+  color: #fff;
+}
+
+.teaser .wrap {
+  max-width: 1920px;
+}
+
+.teaser-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 900px;
+}
+
+.teaser-hero .video-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.teaser-hero .video-wrap video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: saturate(0.4);
+          filter: saturate(0.4);
+}
+
+.teaser-hero .video-wrap::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.teaser-hero .left-block {
+  position: absolute;
+  width: 66.66666%;
+  height: 100%;
+  left: 0;
+  z-index: 10;
+  padding: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.teaser-hero .left-block h1 {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.025em;
+  line-height: 1.4em;
+}
+
+.teaser-hero .left-block img {
+  position: absolute;
+  width: 378px;
+  bottom: 10%;
+  left: 5vw;
+}
+
+.teaser-hero .right-block {
+  position: absolute;
+  width: 33.33333%;
+  height: 100%;
+  right: 0;
+  background-color: #000;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.teaser-hero .right-block::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.teaser-hero .right-block .block-frame {
+  position: relative;
+  width: calc(100% - 6rem);
+  height: calc(100% - 6rem);
+  border: 1px solid #242424;
+  background-color: #000;
+}
+
+.teaser-hero .right-block .block-frame .logo {
+  position: absolute;
+  width: 80%;
+  max-width: 298px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 5rem;
+}
+
+.teaser-hero .right-block .block-frame .logo img {
+  max-width: 100%;
+}
+
+.teaser-hero .right-block .block-frame .divide-line {
+  position: absolute;
+  display: block;
+  width: 80%;
+  height: 1px;
+  background-color: #242424;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 22rem;
+}
+
+.main-artwork {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 940px;
+  background-color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.main-artwork .swipe-title {
+  width: 100%;
+  padding-left: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.main-artwork .swipe-title .swipe-control {
+  position: absolute;
+  right: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-artwork .swipe-title .swipe-control .divide {
+  width: 1px;
+  height: 24px;
+  background-color: #fff;
+  opacity: 0.2;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.main-artwork .swipe-title .swipe-control svg {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.main-artwork .slide-wrap {
+  position: relative;
+  width: 100%;
+  padding-left: 10vw;
+}
+
+.main-artwork .slide-wrap .slide {
+  margin: 0 12px;
+}
+
+.main-artwork .slide-wrap .slide img {
+  max-height: 454px;
+}
+
+.main-artwork .slide-wrap .slide h4 {
+  margin-top: 16px;
+  font-size: 20px;
+}
+
+.con-full {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.con-full img {
+  max-width: 100%;
 }
 
 html:focus-within {

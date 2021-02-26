@@ -1,7 +1,7 @@
 
 @mixin rfs-12{
   font-size: map-get($font-scale, font-scale-12);
-  @media (min-width: $bp-sm){
+  @media (min-width: $bp-lg){
       font-size: map-get($font-scale, font-scale-12);
   }
   @media (min-width: $bp-xl){
@@ -10,7 +10,7 @@
 }
 @mixin rfs-14{
   font-size: map-get($font-scale, font-scale-14);
-  @media (min-width: $bp-sm){
+  @media (min-width: $bp-lg){
       font-size: map-get($font-scale, font-scale-14);
   }
   @media (min-width: $bp-xl){
@@ -19,7 +19,7 @@
 }
 @mixin rfs-16{
   font-size: map-get($font-scale, font-scale-16);
-  @media (min-width: $bp-sm){
+  @media (min-width: $bp-lg){
       font-size: map-get($font-scale, font-scale-16);
   }
   @media (min-width: $bp-xl){
@@ -37,35 +37,44 @@
 }
 @mixin rfs-20{
   font-size: map-get($font-scale, font-scale-16);
-  @media (min-width: $bp-sm){
+  @media (min-width: $bp-lg){
       font-size: map-get($font-scale, font-scale-18);
   }
   @media (min-width: $bp-xl){
-      font-size: map-get($font-scale, font-scale-20);
+      font-size: map-get($font-scale, font-scale-18);
   }
+  @media (min-width: $bp-xxl){
+    font-size: map-get($font-scale, font-scale-20);
+}
 }
 @mixin rfs-24{
   font-size: map-get($font-scale, font-scale-18);
-  @media (min-width: $bp-sm){
+  @media (min-width: $bp-lg){
       font-size: map-get($font-scale, font-scale-20);
   }
   @media (min-width: $bp-xl){
-      font-size: map-get($font-scale, font-scale-24);
+      font-size: map-get($font-scale, font-scale-22);
   }
+  @media (min-width: $bp-xxl){
+    font-size: map-get($font-scale, font-scale-24);
+}
 }
 @mixin rfs-28{
   font-size: map-get($font-scale, font-scale-18);
-  @media (min-width: $bp-sm){
+  @media (min-width: $bp-lg){
       font-size: map-get($font-scale, font-scale-20);
   }
   @media (min-width: $bp-xl){
-      font-size: map-get($font-scale, font-scale-28);
+      font-size: map-get($font-scale, font-scale-22);
   }
+  @media (min-width: $bp-xxl){
+    font-size: map-get($font-scale, font-scale-28);
+}
 }
 @mixin rfs-32{
-  font-size: map-get($font-scale, font-scale-24);
-  @media (min-width: $bp-sm){
-      font-size: map-get($font-scale, font-scale-28);
+  font-size: map-get($font-scale, font-scale-20);
+  @media (min-width: $bp-lg){
+      font-size: map-get($font-scale, font-scale-24);
   }
   @media (min-width: $bp-xl){
       font-size: map-get($font-scale, font-scale-32);
@@ -73,7 +82,7 @@
 }
 @mixin rfs-36{
   font-size: map-get($font-scale, font-scale-24);
-  @media (min-width: $bp-sm){
+  @media (min-width: $bp-md){
       font-size: map-get($font-scale, font-scale-32);
   }
   @media (min-width: $bp-xl){
