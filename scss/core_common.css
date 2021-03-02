@@ -2469,8 +2469,8 @@ template {
      object-fit: cover;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-filter: saturate(0.4);
-          filter: saturate(0.4);
+  -webkit-filter: saturate(0.6);
+          filter: saturate(0.6);
 }
 
 .teaser-hero .video-wrap::before {
@@ -2481,7 +2481,7 @@ template {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 2;
 }
 
@@ -2510,9 +2510,10 @@ template {
 
 .teaser-hero .left-block img {
   position: absolute;
-  width: 378px;
+  width: 100%;
+  max-width: 378px;
   bottom: 10%;
-  left: 5vw;
+  left: 10vw;
 }
 
 .teaser-hero .right-block {
@@ -2597,6 +2598,10 @@ template {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/teaser/artwork_back.png);
 }
 
 .main-artwork .swipe-title {
